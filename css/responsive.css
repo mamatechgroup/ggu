@@ -56,6 +56,7 @@
         left: 0;
         background-color: var(--ggu-blue);
         box-shadow: var(--shadow-md);
+        z-index: 1050;
     }
     
     .nav-menu.active {
@@ -69,7 +70,7 @@
     .dropdown-menu {
         position: static;
         box-shadow: none;
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: var(--ggu-green);
     }
     
     h1 {
@@ -1095,3 +1096,4 @@
         scroll-behavior: auto;
     }
 }
+

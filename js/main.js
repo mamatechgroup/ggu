@@ -571,6 +571,7 @@ class AdmissionManager {
     }
 }
 
+
 class ImageFallbackManager {
     constructor() {
         this.init();
@@ -936,3 +937,129 @@ class AppInitializer {
 
 // Initialize the application
 const app = new AppInitializer();
+
+// Add this function to update header visibility based on auth status
+function updateHeaderVisibility() {
+    const currentUser = DashboardUtils.loadUserData();
+    const authButtons = document.querySelector('.auth-buttons');
+    const userMenu = document.querySelector('.user-menu');
+    
+    if (currentUser) {
+        // User is logged in - show user menu, hide auth buttons
+        if (authButtons) authButtons.style.display = 'none';
+        if (userMenu) {
+            userMenu.style.display = 'flex';
+            // Update user name
+            const userNameElement = userMenu.querySelector('.user-name');
+            if (userNameElement) {
+                userNameElement.textContent = currentUser.name.split(' ')[0];
+            }
+        }
+    } else {
+        // User is not logged in - show auth buttons, hide user menu
+        if (authButtons) authButtons.style.display = 'flex';
+        if (userMenu) userMenu.style.display = 'none';
+    }
+}
+
+// Add this to your existing code - it will be called from layout-loader.js
+function setupGlobalLogout() {
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (logoutBtn) {
+        const freshBtn = logoutBtn.cloneNode(true);
+        logoutBtn.replaceWith(freshBtn);
+        
+        freshBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Clear user data
+            localStorage.removeItem('ggu_current_user');
+            sessionStorage.removeItem('ggu_current_user');
+            // Update header immediately
+            updateHeaderVisibility();
+            // Redirect to login
+            window.location.replace('/login.html');
+        });
+    }
+}
+
+// Main initialization
+document.addEventListener('DOMContentLoaded', function() {
+    // Setup global logout first (works on all pages)
+    setupGlobalLogout();
+    
+    // Update header visibility on initial load
+    updateHeaderVisibility();
+    
+    // Initialize NavigationManager for active tabs
+    if (typeof NavigationManager !== 'undefined') {
+        window.navManager = new NavigationManager();
+    }
+    
+    // Initialize common utilities
+    if (typeof DashboardUtils !== 'undefined') {
+        DashboardUtils.setupSidebarDropdowns();
+    }
+    
+    // Initialize dashboard system for main dashboard pages
+    if (document.querySelector('.dashboard-content')) {
+        try {
+            if (typeof DashboardSystem !== 'undefined') {
+                window.dashboardSystem = new DashboardSystem();
+            }
+        } catch (error) {
+            console.error('Failed to initialize dashboard system:', error);
+        }
+    }
+    
+    // Initialize page-specific modules based on current page
+    const currentPage = window.location.pathname.split('/').pop();
+    
+    switch(currentPage) {
+        case 'settings.html':
+            if (typeof SettingsPage !== 'undefined') SettingsPage.setup();
+            break;
+        case 'schedule.html':
+            if (typeof SchedulePage !== 'undefined') SchedulePage.setup();
+            break;
+        case 'registration.html':
+            if (typeof RegistrationPage !== 'undefined') RegistrationPage.setup();
+            break;
+        case 'profile.html':
+            if (typeof ProfilePage !== 'undefined') ProfilePage.setup();
+            break;
+        case 'messages.html':
+            if (typeof MessagesPage !== 'undefined') MessagesPage.setup();
+            break;
+        case 'finance.html':
+            if (typeof FinancePage !== 'undefined') FinancePage.setup();
+            break;
+        case 'grades.html':
+            if (typeof GradesPage !== 'undefined') GradesPage.setup();
+            break;
+        case 'admin-grades.html':
+        case 'admin-content.html':
+        case 'admin-courses.html':
+        case 'admin-students.html':
+        case 'admin-support.html':
+            if (typeof AdminPages !== 'undefined') AdminPages.setup();
+            break;
+        case 'admin-dashboard.html':
+            if (typeof AdminDashboard !== 'undefined') AdminDashboard.setup();
+            break;
+        default:
+            // For other pages, just load user data
+            if (typeof DashboardUtils !== 'undefined') {
+                DashboardUtils.loadUserData();
+            }
+    }
+});
+
+// Add event listener for partials being loaded
+document.addEventListener('partialLoaded', function() {
+    // Re-run header visibility check when partials are loaded
+    setTimeout(updateHeaderVisibility, 100);
+    // Re-run NavigationManager setup
+    if (window.navManager && typeof window.navManager.setActiveNav === 'function') {
+        window.navManager.setActiveNav();
+    }
+});

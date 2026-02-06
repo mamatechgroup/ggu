@@ -56,22 +56,6 @@ class DashboardSystem {
         }
     }
 
-    setupLogoutButton() {
-        const logoutBtn = document.getElementById('logoutBtn');
-        if (logoutBtn) {
-            logoutBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.performLogout();
-            });
-        }
-    }
-
-    performLogout() {
-        localStorage.removeItem('ggu_current_user');
-        sessionStorage.removeItem('ggu_current_user');
-        window.location.href = 'login.html';
-    }
-
     setupFormSubmissions() {
         const forms = document.querySelectorAll('form');
         forms.forEach(form => {
@@ -1465,8 +1449,28 @@ class AdminDashboard {
 
 // Main initialization
 document.addEventListener('DOMContentLoaded', function() {
+    // Setup global logout first (works on all pages)
+    setupGlobalLogout();
+    
     // Initialize common utilities
     DashboardUtils.setupSidebarDropdowns();
+    
+    // Load user data to show/hide appropriate header sections
+    const currentUser = DashboardUtils.loadUserData();
+    
+    // Show/hide appropriate header sections based on login status
+    const authButtons = document.querySelector('.auth-buttons');
+    const userMenu = document.querySelector('.user-menu');
+    
+    if (currentUser) {
+        // User is logged in - show user menu, hide auth buttons
+        if (authButtons) authButtons.style.display = 'none';
+        if (userMenu) userMenu.style.display = 'flex';
+    } else {
+        // User is not logged in - show auth buttons, hide user menu
+        if (authButtons) authButtons.style.display = 'flex';
+        if (userMenu) userMenu.style.display = 'none';
+    }
     
     // Initialize dashboard system for main dashboard pages
     if (document.querySelector('.dashboard-content')) {
@@ -1517,4 +1521,3 @@ document.addEventListener('DOMContentLoaded', function() {
             DashboardUtils.loadUserData();
     }
 });
-

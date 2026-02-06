@@ -74,12 +74,7 @@ function initializeAuthSystem() {
         recoveryForm.addEventListener('submit', handlePasswordRecovery);
     }
     
-    // Setup logout button
-    const logoutBtn = document.getElementById('logoutBtn');
-    if (logoutBtn) {
-        logoutBtn.addEventListener('click', handleLogout);
-    }
-    
+   
     // Setup toggle password visibility
     document.querySelectorAll('.toggle-password').forEach(button => {
         button.addEventListener('click', function() {
@@ -322,20 +317,6 @@ function getDashboardUrl(role) {
     }
 }
 
-// Handle logout
-function handleLogout(event) {
-    if (event) event.preventDefault();
-    
-    localStorage.removeItem('ggu_user');
-    sessionStorage.removeItem('ggu_user');
-    
-    showAlert('You have been logged out successfully.', 'info');
-    
-    setTimeout(() => {
-        window.location.href = 'login.html';
-    }, 1000);
-}
-
 // Show alert messages
 function showAlert(message, type) {
     // Remove existing alerts
@@ -414,7 +395,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Also update dashboard files to handle logout properly
+
 // Add this to your student-dashboard.html and admin-dashboard.html files
 function initDashboard() {
     const userData = JSON.parse(localStorage.getItem('ggu_user') || sessionStorage.getItem('ggu_user') || 'null');
@@ -437,18 +418,6 @@ function initDashboard() {
     const roleElement = document.getElementById('userRole');
     if (roleElement) {
         roleElement.textContent = userData.role;
-    }
-    
-    // Setup logout button in dashboard
-    const logoutBtn = document.getElementById('dashboardLogoutBtn') || 
-                     document.getElementById('logoutBtn');
-    if (logoutBtn) {
-        logoutBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            localStorage.removeItem('ggu_user');
-            sessionStorage.removeItem('ggu_user');
-            window.location.href = '/login.html';
-        });
     }
 }
 

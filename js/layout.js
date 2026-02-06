@@ -1,28 +1,24 @@
 /**
  * Layout Loader
- * Loads shared header and footer into the page
- * Real-world safe, reusable, and maintainable
+ * Loads shared headers, footers, and sidebars
+ * Safe for admin, student, and public pages
  */
 
 document.addEventListener('DOMContentLoaded', async () => {
-    // Load all partials
     await Promise.all([
-        loadPartial('site-header', 'includes/header.html'),
-        loadPartial('site-footer', 'includes/footer.html'),
+        loadPartial('site-header', '/includes/header.html'),
+        loadPartial('site-footer', '/includes/footer.html'),
         loadPartial('admin-sidebar', '/includes/admin-sidebar.html'),
         loadPartial('admin-header', '/includes/admin-header.html'),
         loadPartial('student-sidebar', '/includes/student-sidebar.html'),
         loadPartial('student-header', '/includes/student-header.html')
     ]);
-    
-    // Initialize navigation after headers are loaded
+
     initializeNavigation();
 });
 
 /**
- * Load an HTML partial into a target container
- * @param {string} elementId - Target container ID
- * @param {string} filePath - Path to HTML partial
+ * Loads an HTML partial into a container
  */
 async function loadPartial(elementId, filePath) {
     const container = document.getElementById(elementId);
@@ -30,21 +26,20 @@ async function loadPartial(elementId, filePath) {
 
     try {
         const response = await fetch(filePath, { cache: 'no-store' });
+        if (!response.ok) throw new Error(`Failed to load ${filePath}`);
 
-        if (!response.ok) {
-            throw new Error(`Failed to load ${filePath}`);
+        container.innerHTML = await response.text();
+
+        // IMPORTANT: Update header visibility after loading header
+        if (elementId === 'site-header' || elementId === 'admin-header' || elementId === 'student-header') {
+            setTimeout(updateHeaderVisibility, 50);
         }
 
-        const html = await response.text();
-        container.innerHTML = html;
-
-        // Dispatch custom event when header is loaded
-        if (elementId === 'site-header') {
-            document.dispatchEvent(new CustomEvent('headerLoaded', {
+        document.dispatchEvent(
+            new CustomEvent('partialLoaded', {
                 detail: { elementId, filePath }
-            }));
-        }
-
+            })
+        );
     } catch (error) {
         console.error(error);
         container.innerHTML = '';
@@ -52,30 +47,118 @@ async function loadPartial(elementId, filePath) {
 }
 
 /**
- * Initialize navigation after all content is loaded
+ * Initializes navigation, auth, and UI logic
  */
 function initializeNavigation() {
-    // Wait a tiny bit to ensure DOM is ready
-    setTimeout(() => {
-        // Check auth status FIRST before initializing navigation
-        if (typeof checkAuthStatus === 'function') {
-            checkAuthStatus();
-        }
+    // Update header visibility FIRST
+    if (typeof updateHeaderVisibility === 'function') {
+        updateHeaderVisibility();
+    }
+
+    // Auth check
+    if (typeof checkAuthStatus === 'function') {
+        checkAuthStatus();
+    }
+
+    setupLogoutButton();
+
+    if (typeof NavigationManager !== 'undefined') {
+        const nav = new NavigationManager();
+        nav.setActiveNav?.();
+    }
+
+    if (typeof AppInitializer !== 'undefined') {
+        new AppInitializer();
+    }
+}
+
+/**
+ * Attaches logout logic safely
+ */
+function setupLogoutButton() {
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (!logoutBtn) return;
+
+    const freshBtn = logoutBtn.cloneNode(true);
+    logoutBtn.replaceWith(freshBtn);
+
+    freshBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        performLogout();
+    });
+}
+
+/**
+ * Global logout function (SAFE from any folder)
+ */
+function performLogout() {
+    localStorage.removeItem('ggu_current_user');
+    sessionStorage.removeItem('ggu_current_user');
+    
+    // Update header immediately before redirect
+    if (typeof updateHeaderVisibility === 'function') {
+        updateHeaderVisibility();
+    }
+    
+    // 🔥 ABSOLUTE redirect — fixes /admin/login.html bug
+    window.location.replace('/login.html');
+}
+
+/**
+ * Rebind logout when headers load dynamically
+ */
+document.addEventListener('partialLoaded', () => {
+    setupLogoutButton();
+    // Also update header visibility
+    if (typeof updateHeaderVisibility === 'function') {
+        setTimeout(updateHeaderVisibility, 100);
+    }
+});
+
+// Make updateHeaderVisibility available globally
+window.updateHeaderVisibility = updateHeaderVisibility;
+
+/**
+ * Update header visibility based on authentication status
+ */
+function updateHeaderVisibility() {
+    try {
+        // Check if user is logged in
+        const user = localStorage.getItem('ggu_current_user') || 
+                     sessionStorage.getItem('ggu_current_user');
         
-        // Initialize NavigationManager with proper timing
-        if (typeof NavigationManager !== 'undefined') {
-            // Use event-driven approach
-            const navManager = new NavigationManager();
+        const currentUser = user ? JSON.parse(user) : null;
+        const authButtons = document.querySelector('.auth-buttons');
+        const userMenu = document.querySelector('.user-menu');
+        
+        if (!authButtons || !userMenu) return;
+        
+        if (currentUser) {
+            // User is logged in - show user menu, hide auth buttons
+            authButtons.style.display = 'none';
+            userMenu.style.display = 'flex';
             
-            // Re-trigger navigation setup after auth check
-            if (typeof navManager.setActiveNav === 'function') {
-                setTimeout(() => navManager.setActiveNav(), 100);
+            // Update user name
+            const userNameElement = userMenu.querySelector('.user-name');
+            if (userNameElement && currentUser.name) {
+                userNameElement.textContent = currentUser.name.split(' ')[0];
             }
+            
+            // Update dashboard link based on role
+            const dashboardLink = userMenu.querySelector('.dashboard-link');
+            if (dashboardLink) {
+                if (currentUser.role === 'admin') {
+                    dashboardLink.href = '/admin/dashboard.html';
+                } else if (currentUser.role === 'student') {
+                    dashboardLink.href = '/student/dashboard.html';
+                }
+            }
+        } else {
+            // User is not logged in - show auth buttons, hide user menu
+            authButtons.style.display = 'flex';
+            userMenu.style.display = 'none';
         }
-        
-        // Reinitialize any other managers that depend on the header
-        if (typeof AppInitializer !== 'undefined') {
-            new AppInitializer();
-        }
-    }, 50);
+    } catch (error) {
+        console.error('Error updating header visibility:', error);
+    }
 }
