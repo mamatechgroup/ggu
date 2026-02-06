@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colleges & Departments - Grand Gedeh University</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <div id="site-header"></div>
+
+    <!-- Page Header -->
+    <section class="hero">
+        <div class="container">
+            <h2 class="page-title">Colleges & Departments</h2>
+            <p class="lead">Explore our comprehensive academic structure across six colleges offering diverse programs</p>
+        </div>
+    </section>
+
+    <!-- College Filter -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h3>Find Your Program</h3>
+                    <p>Browse through our colleges and departments to discover the perfect academic path for you.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search programs, departments..." id="collegeSearch">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colleges Grid -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Colleges</h2>
+            
+            <!-- College of Agriculture and Forestry -->
+            <div class="college-card card mb-4" id="agriculture">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 text-center">
+                            <div class="icon-container">
+                                <img src="assets/images/colleges/agriculture.png" alt="Agriculture and Forestry Icon" class="college-icon" 
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=200&h=200&fit=crop&crop=center'; this.alt='Agriculture';">
+                                <div class="icon-placeholder" style="display: none;">Agriculture & Forestry</div>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <h3>College of Agriculture and Forestry</h3>
+                            <p class="lead">Promoting sustainable agriculture and forestry practices for food security and environmental conservation.</p>
+                            <div class="row mt-3">
+                                <div class="col-md-8">
+                                    <h5>Departments:</h5>
+                                    <ul class="department-list">
+                                        <li><strong>Forestry</strong> - Sustainable forest management and conservation</li>
+                                        <li><strong>Agronomy</strong> - Crop production and soil science</li>
+                                        <li><strong>General Agriculture</strong> - Comprehensive agricultural sciences</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Research Areas:</h5>
+                                    <ul>
+                                        <li>Sustainable Agriculture</li>
+                                        <li>Forest Conservation</li>
+                                        <li>Agribusiness</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary college-toggle mt-3">
+                                <i class="fas fa-chevron-down"></i> View Faculty
+                            </button>
+                            <div class="faculty-info mt-3" style="display: none;">
+                                <h6>Notable Faculty:</h6>
+                                <p>Dr. Mary Johnson (Dean), Prof. Samuel Cooper, Dr. Agnes Freeman</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- College of Science, Engineering and Technology -->
+            <div class="college-card card mb-4" id="science">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 text-center">
+                            <div class="icon-container">
+                                <img src="assets/images/colleges/science-engineering.png" alt="Science and Engineering Icon" class="college-icon"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=200&h=200&fit=crop&crop=center'; this.alt='Science & Engineering';">
+                                <div class="icon-placeholder" style="display: none;">Science & Engineering</div>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <h3>College of Science, Engineering and Technology</h3>
+                            <p class="lead">Advancing scientific knowledge and technological innovation for national development.</p>
+                            <div class="row mt-3">
+                                <div class="col-md-8">
+                                    <h5>Departments:</h5>
+                                    <ul class="department-list">
+                                        <li><strong>Geology</strong> - Earth sciences and mineral resources</li>
+                                        <li><strong>Civil Engineering</strong> - Infrastructure and construction</li>
+                                        <li><strong>Electrical Engineering</strong> - Power systems and electronics</li>
+                                        <li><strong>Information Technology</strong> - Computing and digital solutions</li>
+                                        <li><strong>Environmental Science</strong> - Environmental protection</li>
+                                        <li><strong>Physics</strong> - Fundamental physical sciences</li>
+                                        <li><strong>Biology</strong> - Life sciences research</li>
+                                        <li><strong>Chemistry</strong> - Chemical sciences and applications</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Research Areas:</h5>
+                                    <ul>
+                                        <li>Renewable Energy</li>
+                                        <li>Climate Change</li>
+                                        <li>Digital Innovation</li>
+                                        <li>Material Science</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary college-toggle mt-3">
+                                <i class="fas fa-chevron-down"></i> View Faculty
+                            </button>
+                            <div class="faculty-info mt-3" style="display: none;">
+                                <h6>Notable Faculty:</h6>
+                                <p>Dr. James Wilson (Dean), Prof. Sarah Thompson, Dr. Robert Chen</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- College of Business and Public Administration -->
+            <div class="college-card card mb-4" id="business">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 text-center">
+                            <div class="icon-container">
+                                <img src="assets/images/colleges/business-admin.png" alt="Business and Administration Icon" class="college-icon"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1552664730-d307ca884978?w=200&h=200&fit=crop&crop=center'; this.alt='Business & Admin';">
+                                <div class="icon-placeholder" style="display: none;">Business & Admin</div>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <h3>College of Business and Public Administration</h3>
+                            <p class="lead">Developing business leaders and public administrators for the Liberian economy.</p>
+                            <div class="row mt-3">
+                                <div class="col-md-8">
+                                    <h5>Departments:</h5>
+                                    <ul class="department-list">
+                                        <li><strong>Accounting</strong> - Financial management and auditing</li>
+                                        <li><strong>Economics</strong> - Economic theory and policy</li>
+                                        <li><strong>Business Administration</strong> - Management and leadership</li>
+                                        <li><strong>Management</strong> - Organizational management</li>
+                                        <li><strong>Marketing</strong> - Market research and strategy</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Research Areas:</h5>
+                                    <ul>
+                                        <li>Entrepreneurship</li>
+                                        <li>Public Policy</li>
+                                        <li>Corporate Governance</li>
+                                        <li>Market Analysis</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary college-toggle mt-3">
+                                <i class="fas fa-chevron-down"></i> View Faculty
+                            </button>
+                            <div class="faculty-info mt-3" style="display: none;">
+                                <h6>Notable Faculty:</h6>
+                                <p>Dr. Patricia Williams (Dean), Prof. David Brown, Dr. Elizabeth Taylor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- College of Liberal Arts -->
+            <div class="college-card card mb-4" id="liberal-arts">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 text-center">
+                            <div class="icon-container">
+                                <img src="assets/images/colleges/liberal-arts.png" alt="Liberal Arts Icon" class="college-icon"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1456513080510-3449c76e5ab3?w=200&h=200&fit=crop&crop=center'; this.alt='Liberal Arts';">
+                                <div class="icon-placeholder" style="display: none;">Liberal Arts</div>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <h3>College of Liberal Arts</h3>
+                            <p class="lead">Exploring human culture, society, and expression through interdisciplinary studies.</p>
+                            <div class="row mt-3">
+                                <div class="col-md-8">
+                                    <h5>Departments:</h5>
+                                    <ul class="department-list">
+                                        <li><strong>Development and Migration Studies</strong> - Social development</li>
+                                        <li><strong>English and Literature</strong> - Language and literary studies</li>
+                                        <li><strong>Sociology and Anthropology</strong> - Social sciences</li>
+                                        <li><strong>History and Political Science</strong> - Historical and political analysis</li>
+                                        <li><strong>Geography</strong> - Spatial and environmental studies</li>
+                                        <li><strong>French</strong> - French language and culture</li>
+                                        <li><strong>Religion and Philosophy</strong> - Religious and philosophical inquiry</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Research Areas:</h5>
+                                    <ul>
+                                        <li>Cultural Studies</li>
+                                        <li>Social Justice</li>
+                                        <li>Post-Conflict Studies</li>
+                                        <li>Language Preservation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary college-toggle mt-3">
+                                <i class="fas fa-chevron-down"></i> View Faculty
+                            </button>
+                            <div class="faculty-info mt-3" style="display: none;">
+                                <h6>Notable Faculty:</h6>
+                                <p>Dr. Thomas Davis (Dean), Prof. Grace Johnson, Dr. Michael Roberts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- College of Teachers' Education -->
+            <div class="college-card card mb-4" id="education">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 text-center">
+                            <div class="icon-container">
+                                <img src="assets/images/colleges/education.png" alt="Education Icon" class="college-icon"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=200&h=200&fit=crop&crop=center'; this.alt='Education';">
+                                <div class="icon-placeholder" style="display: none;">Education</div>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <h3>College of Teachers' Education</h3>
+                            <p class="lead">Preparing exceptional educators for Liberia's educational system at all levels.</p>
+                            <div class="row mt-3">
+                                <div class="col-md-8">
+                                    <h5>Departments:</h5>
+                                    <ul class="department-list">
+                                        <li><strong>Early Childhood Education</strong> - Pre-school education</li>
+                                        <li><strong>Secondary Education</strong> - High school teaching</li>
+                                        <li><strong>Primary Education</strong> - Elementary education</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Research Areas:</h5>
+                                    <ul>
+                                        <li>Educational Technology</li>
+                                        <li>Curriculum Development</li>
+                                        <li>Teacher Training</li>
+                                        <li>Inclusive Education</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary college-toggle mt-3">
+                                <i class="fas fa-chevron-down"></i> View Faculty
+                            </button>
+                            <div class="faculty-info mt-3" style="display: none;">
+                                <h6>Notable Faculty:</h6>
+                                <p>Dr. Susan Miller (Dean), Prof. John Anderson, Dr. Margaret White</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- College of Health Sciences -->
+            <div class="college-card card mb-4" id="health">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 text-center">
+                            <div class="icon-container">
+                                <img src="assets/images/colleges/health-sciences.png" alt="Health Sciences Icon" class="college-icon"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=200&h=200&fit=crop&crop=center'; this.alt='Health Sciences';">
+                                <div class="icon-placeholder" style="display: none;">Health Sciences</div>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <h3>College of Health Sciences</h3>
+                            <p class="lead">Training healthcare professionals to improve community health outcomes in Liberia.</p>
+                            <div class="row mt-3">
+                                <div class="col-md-8">
+                                    <h5>Departments:</h5>
+                                    <ul class="department-list">
+                                        <li><strong>Nursing</strong> - Patient care and nursing practice</li>
+                                        <li><strong>Midwifery</strong> - Maternal and child health</li>
+                                        <li><strong>Public Health</strong> - Community health promotion</li>
+                                        <li><strong>Laboratory Science</strong> - Medical diagnostics</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Research Areas:</h5>
+                                    <ul>
+                                        <li>Infectious Diseases</li>
+                                        <li>Maternal Health</li>
+                                        <li>Health Systems</li>
+                                        <li>Epidemiology</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary college-toggle mt-3">
+                                <i class="fas fa-chevron-down"></i> View Faculty
+                            </button>
+                            <div class="faculty-info mt-3" style="display: none;">
+                                <h6>Notable Faculty:</h6>
+                                <p>Dr. George Thompson (Dean), Prof. Sarah Johnson, Dr. Paul Williams</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Information -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Program Offerings</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Undergraduate Programs</h4>
+                            <p>Four-year bachelor's degree programs across all colleges with various majors and minors.</p>
+                            <ul>
+                                <li>Bachelor of Science (B.Sc.)</li>
+                                <li>Bachelor of Arts (B.A.)</li>
+                                <li>Bachelor of Education (B.Ed.)</li>
+                                <li>Bachelor of Business Administration (BBA)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Graduate Programs</h4>
+                            <p>Advanced studies leading to master's degrees in selected fields.</p>
+                            <ul>
+                                <li>Master of Science (M.Sc.)</li>
+                                <li>Master of Arts (M.A.)</li>
+                                <li>Master of Business Administration (MBA)</li>
+                                <li>Master of Public Health (MPH)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Certificate Programs</h4>
+                            <p>Short-term professional development and certification programs.</p>
+                            <ul>
+                                <li>Professional Certificates</li>
+                                <li>Diploma Programs</li>
+                                <li>Executive Education</li>
+                                <li>Continuing Education</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="site-footer"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/layout.js"></script>
+</body>
+</html>

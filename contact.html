@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Grand Gedeh University</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <div id="site-header"></div>
+
+    <!-- Page Header -->
+    <section class="hero">
+        <div class="container">
+            <h2 class="page-title">Contact Us</h2>
+            <p class="lead">Get in touch with Grand Gedeh University</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2>Contact Information</h2>
+                    <p>We're here to help you with any questions or concerns. Reach out to us through any of the following channels:</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-4">
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Physical Address</h4>
+                                    <p>Grand Gedeh University<br>
+                                       Zwedru, Grand Gedeh County<br>
+                                       Republic of Liberia</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Phone Numbers</h4>
+                                    <p>Main: +231 88 123 4567<br>
+                                       Admissions: +231 88 123 4568<br>
+                                       Fax: +231 88 987 6543</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email Addresses</h4>
+                                    <p>General: info@ggu.edu.lr<br>
+                                       Admissions: admissions@ggu.edu.lr<br>
+                                       Support: support@ggu.edu.lr</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Office Hours</h4>
+                                    <p>Monday - Friday: 8:00 AM - 5:00 PM<br>
+                                       Saturday: 9:00 AM - 1:00 PM<br>
+                                       Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Quick Contact</h4>
+                            <p>For immediate assistance, contact our hotline:</p>
+                            <div class="hotline mb-4">
+                                <div class="hotline-number">
+                                    <i class="fas fa-phone-volume"></i>
+                                    <span>+231 88 123 4567</span>
+                                </div>
+                                <p class="text-muted">Available during office hours</p>
+                            </div>
+                            
+                            <h5>Emergency Contacts</h5>
+                            <ul class="emergency-contacts">
+                                <li><strong>Security:</strong> +231 88 123 4577</li>
+                                <li><strong>Medical:</strong> +231 88 123 4578</li>
+                                <li><strong>Campus Safety:</strong> +231 88 123 4579</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="section section-light" id="contactFormSection">
+        <div class="container">
+            <h2 class="section-title">Send Us a Message</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <form id="contactForm" novalidate>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">Full Name *</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                        <div class="invalid-feedback">
+                                            Please provide your name.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid email address.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Subject *</label>
+                                    <input type="text" class="form-control" id="subject" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a subject.
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="department" class="form-label">Department</label>
+                                    <select class="form-select" id="department">
+                                        <option value="">Select a department</option>
+                                        <option value="admissions">Admissions Office</option>
+                                        <option value="academic">Academic Affairs</option>
+                                        <option value="finance">Finance Department</option>
+                                        <option value="student">Student Affairs</option>
+                                        <option value="library">Library Services</option>
+                                        <option value="ict">ICT Services</option>
+                                        <option value="general">General Inquiry</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message *</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Please enter your message.
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletter">
+                                        <label class="form-check-label" for="newsletter">
+                                            Subscribe to our newsletter for updates
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-paper-plane"></i> Send Message
+                                    </button>
+                                </div>
+                            </form>
+                            
+                            <div id="formSuccess" class="alert alert-success mt-3" style="display: none;">
+                                <i class="fas fa-check-circle"></i> Thank you for your message! We will get back to you soon.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Department Contacts -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Department Contacts</h2>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Academic Departments</h4>
+                            <div class="dept-contact">
+                                <h6>Admissions Office</h6>
+                                <p><i class="fas fa-envelope"></i> admissions@ggu.edu.lr</p>
+                                <p><i class="fas fa-phone"></i> +231 88 123 4568</p>
+                            </div>
+                            <div class="dept-contact">
+                                <h6>Registrar's Office</h6>
+                                <p><i class="fas fa-envelope"></i> registrar@ggu.edu.lr</p>
+                                <p><i class="fas fa-phone"></i> +231 88 123 4569</p>
+                            </div>
+                            <div class="dept-contact">
+                                <h6>Academic Affairs</h6>
+                                <p><i class="fas fa-envelope"></i> academic@ggu.edu.lr</p>
+                                <p><i class="fas fa-phone"></i> +231 88 123 4570</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Administrative Departments</h4>
+                            <div class="dept-contact">
+                                <h6>Finance Department</h6>
+                                <p><i class="fas fa-envelope"></i> finance@ggu.edu.lr</p>
+                                <p><i class="fas fa-phone"></i> +231 88 123 4571</p>
+                            </div>
+                            <div class="dept-contact">
+                                <h6>Human Resources</h6>
+                                <p><i class="fas fa-envelope"></i> hr@ggu.edu.lr</p>
+                                <p><i class="fas fa-phone"></i> +231 88 123 4572</p>
+                            </div>
+                            <div class="dept-contact">
+                                <h6>Student Affairs</h6>
+                                <p><i class="fas fa-envelope"></i> studentaffairs@ggu.edu.lr</p>
+                                <p><i class="fas fa-phone"></i> +231 88 123 4573</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Library Services</h4>
+                            <p><i class="fas fa-envelope"></i> library@ggu.edu.lr</p>
+                            <p><i class="fas fa-phone"></i> +231 88 123 4574</p>
+                            <p><i class="fas fa-clock"></i> Mon-Fri: 8am-8pm, Sat: 9am-4pm</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">ICT Services</h4>
+                            <p><i class="fas fa-envelope"></i> ict@ggu.edu.lr</p>
+                            <p><i class="fas fa-phone"></i> +231 88 123 4575</p>
+                            <p><i class="fas fa-clock"></i> 24/7 Support Hotline</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Maintenance</h4>
+                            <p><i class="fas fa-envelope"></i> maintenance@ggu.edu.lr</p>
+                            <p><i class="fas fa-phone"></i> +231 88 123 4576</p>
+                            <p><i class="fas fa-clock"></i> Emergency: 24/7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Our Location</h2>
+            
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="map-container">
+                        <div id="gguMap"></div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Getting Here</h4>
+                            
+                            <div class="directions mb-4">
+                                <h6><i class="fas fa-car"></i> By Road</h6>
+                                <p>From Monrovia: Take Robertsfield Highway to Zwedru. The university is located 5km from the city center.</p>
+                            </div>
+                            
+                            <div class="directions mb-4">
+                                <h6><i class="fas fa-bus"></i> Public Transport</h6>
+                                <p>Regular buses and taxis available from Zwedru city center to the university campus.</p>
+                            </div>
+                            
+                            <div class="directions">
+                                <h6><i class="fas fa-plane"></i> By Air</h6>
+                                <p>Nearest airport: Zwedru Airport (15km from campus). Taxis available from airport to campus.</p>
+                            </div>
+                            
+                            <div class="visitor-info mt-4">
+                                <h6>Visitor Information</h6>
+                                <ul>
+                                    <li>Parking available at main gate</li>
+                                    <li>Visitor passes required at security</li>
+                                    <li>Guided tours available by appointment</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2>Connect With Us</h2>
+                    <p class="lead">Follow us on social media for updates and announcements</p>
+                    
+                    <div class="social-media-links mt-4">
+                        <a href="#" class="social-media-link facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="social-media-link twitter">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="social-media-link linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-media-link youtube">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                        <a href="#" class="social-media-link instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-5">
+                        <h4>Need Immediate Assistance?</h4>
+                        <p>Call our support line: <strong>+231 88 123 4567</strong></p>
+                        <p>Or email: <strong>support@ggu.edu.lr</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="site-footer"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/layout.js"></script>
+</body>
+</html>

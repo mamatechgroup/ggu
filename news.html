@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Bulletin - Grand Gedeh University</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <div id="site-header"></div>
+
+    <!-- Page Header -->
+    <section class="hero">
+        <div class="container">
+            <h2 class="page-title">News & Bulletin</h2>
+            <p class="lead">Stay updated with the latest from Grand Gedeh University</p>
+        </div>
+    </section>
+
+    <!-- News Filter -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h3>Latest Updates</h3>
+                    <p>Browse through university news, announcements, and events</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <select class="form-select news-filter" id="newsFilter">
+                                <option value="all">All Categories</option>
+                                <option value="academic">Academic News</option>
+                                <option value="research">Research</option>
+                                <option value="campus">Campus News</option>
+                                <option value="events">Events</option>
+                                <option value="announcements">Announcements</option>
+                                <option value="bulletin">Bulletin</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-select" id="newsYear">
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured News -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Featured News</h2>
+            
+            <div class="row mb-5">
+                <div class="col-lg-8">
+                    <div class="featured-news-card">
+                        <div class="featured-image">
+                            <img src="assets/images/featured-news.jpg" alt="Featured News" class="img-fluid rounded" onerror="this.src='https://via.placeholder.com/800x400/1E3A8A/FFFFFF?text=Featured+News'">
+                            <div class="featured-badge">FEATURED</div>
+                        </div>
+                        <div class="featured-content p-4">
+                            <div class="news-meta">
+                                <span class="news-category">ACADEMIC</span>
+                                <span class="news-date"><i class="far fa-calendar"></i> March 15, 2024</span>
+                            </div>
+                            <h3 class="mt-3">GGU Launches New Engineering Programs</h3>
+                            <p>Grand Gedeh University is proud to announce the launch of new engineering programs in Civil, Electrical, and Environmental Engineering starting Fall 2024. These programs are designed to meet the growing demand for engineering professionals in Liberia...</p>
+                            <a href="#" class="btn btn-primary mt-3">Read Full Story</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="sidebar-news">
+                        <h4>Top Stories</h4>
+                        <div class="top-story">
+                            <h5>University Receives Major Research Grant</h5>
+                            <p class="news-date">March 10, 2024</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                        <div class="top-story">
+                            <h5>Campus Renovation Completed</h5>
+                            <p class="news-date">March 5, 2024</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                        <div class="top-story">
+                            <h5>New Partnership with International University</h5>
+                            <p class="news-date">February 28, 2024</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                        <div class="top-story">
+                            <h5>Student Wins National Science Competition</h5>
+                            <p class="news-date">February 20, 2024</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Articles -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Latest News Articles</h2>
+            
+            <div class="row" id="newsContainer">
+                <!-- News articles will be loaded here -->
+            </div>
+            
+            <div class="text-center mt-5">
+                <nav aria-label="News pagination">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcements -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Important Announcements</h2>
+            
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="announcements-list">
+                        <div class="announcement-item urgent">
+                            <div class="announcement-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="announcement-content">
+                                <h4>Registration Deadline Extended</h4>
+                                <p class="announcement-date">Posted: March 18, 2024</p>
+                                <p>The registration deadline for the Spring 2024 semester has been extended to March 25, 2024. All students are encouraged to complete their registration before the new deadline.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="announcement-item">
+                            <div class="announcement-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <div class="announcement-content">
+                                <h4>Mid-Semester Examinations Schedule</h4>
+                                <p class="announcement-date">Posted: March 12, 2024</p>
+                                <p>The mid-semester examination schedule for all courses is now available. Students can access the schedule through the student portal or at the Registrar's Office.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="announcement-item">
+                            <div class="announcement-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="announcement-content">
+                                <h4>Campus Maintenance Notice</h4>
+                                <p class="announcement-date">Posted: March 8, 2024</p>
+                                <p>Scheduled maintenance of campus facilities will take place on March 25-26, 2024. Some buildings may experience temporary service interruptions during this period.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Subscribe to Updates</h4>
+                            <p>Get the latest news and announcements delivered to your inbox.</p>
+                            <form id="newsletterForm">
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Your email address" required>
+                                </div>
+                                <div class="mb-3">
+                                    <select class="form-select" required>
+                                        <option value="">Select category</option>
+                                        <option value="all">All Updates</option>
+                                        <option value="academic">Academic News</option>
+                                        <option value="events">Events</option>
+                                        <option value="announcements">Announcements</option>
+                                        <option value="bulletin">Bulletin</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h4 class="card-title">Submit News</h4>
+                            <p>Have news to share? Submit your story for consideration.</p>
+                            <a href="contact.html" class="btn btn-outline-primary w-100">Submit News Item</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Calendar -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Events Calendar</h2>
+            
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="events-calendar">
+                        <div class="calendar-header">
+                            <h4>March 2024</h4>
+                            <div class="calendar-nav">
+                                <button class="btn btn-sm btn-outline-primary"><i class="fas fa-chevron-left"></i></button>
+                                <button class="btn btn-sm btn-outline-primary">Today</button>
+                                <button class="btn btn-sm btn-outline-primary"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="table-responsive">
+                            <table class="table table-bordered text-center">
+                                <thead>
+                                    <tr>
+                                        <th>Sun</th>
+                                        <th>Mon</th>
+                                        <th>Tue</th>
+                                        <th>Wed</th>
+                                        <th>Thu</th>
+                                        <th>Fri</th>
+                                        <th>Sat</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="other-month">25</td>
+                                        <td class="other-month">26</td>
+                                        <td class="other-month">27</td>
+                                        <td class="other-month">28</td>
+                                        <td class="other-month">29</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                        <td class="has-event">
+                                            13
+                                            <div class="event-dot" data-bs-toggle="tooltip" title="Faculty Meeting"></div>
+                                        </td>
+                                        <td>14</td>
+                                        <td class="has-event">
+                                            15
+                                            <div class="event-dot" data-bs-toggle="tooltip" title="New Program Launch"></div>
+                                        </td>
+                                        <td>16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>18</td>
+                                        <td>19</td>
+                                        <td>20</td>
+                                        <td>21</td>
+                                        <td class="has-event">
+                                            22
+                                            <div class="event-dot" data-bs-toggle="tooltip" title="Cultural Festival"></div>
+                                        </td>
+                                        <td>23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td class="has-event">
+                                            25
+                                            <div class="event-dot" data-bs-toggle="tooltip" title="Registration Deadline"></div>
+                                        </td>
+                                        <td>26</td>
+                                        <td>27</td>
+                                        <td>28</td>
+                                        <td>29</td>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>31</td>
+                                        <td class="other-month">1</td>
+                                        <td class="other-month">2</td>
+                                        <td class="other-month">3</td>
+                                        <td class="other-month">4</td>
+                                        <td class="other-month">5</td>
+                                        <td class="other-month">6</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="upcoming-events">
+                        <h4>Upcoming Events</h4>
+                        
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="event-day">15</span>
+                                <span class="event-month">MAR</span>
+                            </div>
+                            <div class="event-details">
+                                <h5>Engineering Program Launch</h5>
+                                <p>Main Auditorium, 10:00 AM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="event-day">22</span>
+                                <span class="event-month">MAR</span>
+                            </div>
+                            <div class="event-details">
+                                <h5>GGU Cultural Festival</h5>
+                                <p>Campus Grounds, 2:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="event-day">25</span>
+                                <span class="event-month">MAR</span>
+                            </div>
+                            <div class="event-details">
+                                <h5>Registration Deadline</h5>
+                                <p>All Day</p>
+                            </div>
+                        </div>
+                        
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="event-day">05</span>
+                                <span class="event-month">APR</span>
+                            </div>
+                            <div class="event-details">
+                                <h5>Research Symposium</h5>
+                                <p>Science Building, 9:00 AM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-outline-primary">View All Events</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Archive -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Newsletter Archive</h2>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">GGU Newsletter - Q1 2024</h4>
+                            <p class="text-muted">March 2024</p>
+                            <p>Highlights from the first quarter including new programs, research achievements, and campus developments.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">GGU Newsletter - Q4 2023</h4>
+                            <p class="text-muted">December 2023</p>
+                            <p>Year-end review featuring graduation highlights, alumni achievements, and 2024 preview.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">GGU Newsletter - Q3 2023</h4>
+                            <p class="text-muted">September 2023</p>
+                            <p>Back-to-school edition with new faculty profiles, research grants, and campus updates.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary">Browse Full Archive</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bulletin Section -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">University Bulletin</h2>
+            <p class="text-center mb-5">Official notices, circulars, and important communications from university administration</p>
+            
+            <div class="row">
+                <!-- Current Bulletin -->
+                <div class="col-lg-8">
+                    <div class="card mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0">Current Bulletin - March 2024</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="bulletin-content">
+                                <!-- Academic Bulletin -->
+                                <div class="bulletin-category mb-4">
+                                    <h5 class="text-primary border-bottom pb-2">
+                                        <i class="fas fa-graduation-cap me-2"></i>Academic Bulletin
+                                    </h5>
+                                    <div class="bulletin-item">
+                                        <div class="d-flex justify-content-between align-items-start mb-2">
+                                            <h6 class="mb-0">Final Examination Timetable Released</h6>
+                                            <span class="badge bg-warning">New</span>
+                                        </div>
+                                        <p class="text-muted small">March 20, 2024 | Academic Affairs Office</p>
+                                        <p>The final examination timetable for the Spring 2024 semester has been published. Students can access it through the student portal or at their respective departments.</p>
+                                        <a href="#" class="btn btn-sm btn-outline-primary">Download PDF</a>
+                                    </div>
+                                    
+                                    <div class="bulletin-item mt-3">
+                                        <h6>Course Registration for Summer Session</h6>
+                                        <p class="text-muted small">March 18, 2024 | Registrar's Office</p>
+                                        <p>Online registration for summer session courses begins April 1, 2024. All continuing students are required to register within the stipulated period.</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Administrative Bulletin -->
+                                <div class="bulletin-category mb-4">
+                                    <h5 class="text-success border-bottom pb-2">
+                                        <i class="fas fa-university me-2"></i>Administrative Bulletin
+                                    </h5>
+                                    <div class="bulletin-item">
+                                        <div class="d-flex justify-content-between align-items-start mb-2">
+                                            <h6 class="mb-0">Updated University Policies</h6>
+                                            <span class="badge bg-danger">Important</span>
+                                        </div>
+                                        <p class="text-muted small">March 15, 2024 | Office of the President</p>
+                                        <p>The University Senate has approved updates to several academic and administrative policies. All staff and students are advised to review the changes.</p>
+                                        <a href="#" class="btn btn-sm btn-outline-success">View Policies</a>
+                                    </div>
+                                </div>
+                                
+                                <!-- Research Bulletin -->
+                                <div class="bulletin-category mb-4">
+                                    <h5 class="text-info border-bottom pb-2">
+                                        <i class="fas fa-flask me-2"></i>Research Bulletin
+                                    </h5>
+                                    <div class="bulletin-item">
+                                        <h6>Call for Research Proposals 2024</h6>
+                                        <p class="text-muted small">March 10, 2024 | Research Directorate</p>
+                                        <p>The Research Directorate invites faculty members to submit research proposals for the 2024 funding cycle. Deadline for submission is April 30, 2024.</p>
+                                        <a href="#" class="btn btn-sm btn-outline-info">Submit Proposal</a>
+                                    </div>
+                                </div>
+                                
+                                <!-- Student Affairs Bulletin -->
+                                <div class="bulletin-category">
+                                    <h5 class="text-warning border-bottom pb-2">
+                                        <i class="fas fa-users me-2"></i>Student Affairs Bulletin
+                                    </h5>
+                                    <div class="bulletin-item">
+                                        <h6>Student Leadership Elections</h6>
+                                        <p class="text-muted small">March 8, 2024 | Student Affairs Office</p>
+                                        <p>Nominations are open for student leadership positions for the 2024/2025 academic year. All interested students should submit nominations by March 31, 2024.</p>
+                                        <a href="#" class="btn btn-sm btn-outline-warning">Submit Nomination</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Archived Bulletins -->
+                    <div class="card">
+                        <div class="card-header bg-secondary text-white">
+                            <h4 class="mb-0">Archived Bulletins</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Month/Year</th>
+                                            <th>Title</th>
+                                            <th>Category</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>February 2024</td>
+                                            <td>Mid-Semester Academic Updates</td>
+                                            <td><span class="badge bg-primary">Academic</span></td>
+                                            <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>January 2024</td>
+                                            <td>New Year Administrative Circular</td>
+                                            <td><span class="badge bg-success">Administrative</span></td>
+                                            <td><a href="#" class="btn btn-sm btn-outline-success">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>December 2023</td>
+                                            <td>End of Year Research Report</td>
+                                            <td><span class="badge bg-info">Research</span></td>
+                                            <td><a href="#" class="btn btn-sm btn-outline-info">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>November 2023</td>
+                                            <td>Student Welfare Updates</td>
+                                            <td><span class="badge bg-warning">Student Affairs</span></td>
+                                            <td><a href="#" class="btn btn-sm btn-outline-warning">View</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bulletin Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Bulletin Categories -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Bulletin Categories</h5>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                    Academic Bulletins
+                                    <span class="badge bg-primary rounded-pill">12</span>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                    Administrative Circulars
+                                    <span class="badge bg-success rounded-pill">8</span>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                    Research Announcements
+                                    <span class="badge bg-info rounded-pill">6</span>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                    Student Affairs Updates
+                                    <span class="badge bg-warning rounded-pill">10</span>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                    Financial Aid Notices
+                                    <span class="badge bg-danger rounded-pill">4</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Important Deadlines -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Upcoming Deadlines</h5>
+                            <div class="deadline-list">
+                                <div class="deadline-item mb-3">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <h6 class="mb-1">Research Proposal Submission</h6>
+                                            <p class="text-muted small mb-0">Research Directorate</p>
+                                        </div>
+                                        <span class="badge bg-danger">Apr 30</span>
+                                    </div>
+                                </div>
+                                <div class="deadline-item mb-3">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <h6 class="mb-1">Summer Course Registration</h6>
+                                            <p class="text-muted small mb-0">Registrar's Office</p>
+                                        </div>
+                                        <span class="badge bg-warning">Apr 15</span>
+                                    </div>
+                                </div>
+                                <div class="deadline-item mb-3">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <h6 class="mb-1">Student Leadership Nominations</h6>
+                                            <p class="text-muted small mb-0">Student Affairs</p>
+                                        </div>
+                                        <span class="badge bg-info">Mar 31</span>
+                                    </div>
+                                </div>
+                                <div class="deadline-item">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <h6 class="mb-1">Faculty Promotion Applications</h6>
+                                            <p class="text-muted small mb-0">Human Resources</p>
+                                        </div>
+                                        <span class="badge bg-success">May 15</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bulletin Subscription -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Get Bulletin Updates</h5>
+                            <p class="card-text small">Subscribe to receive official university bulletins directly in your email.</p>
+                            <form class="bulletin-subscription">
+                                <div class="mb-3">
+                                    <label for="bulletinEmail" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="bulletinEmail" placeholder="your.email@example.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Select Categories</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="categoryAcademic" checked>
+                                        <label class="form-check-label" for="categoryAcademic">
+                                            Academic Bulletins
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="categoryAdmin">
+                                        <label class="form-check-label" for="categoryAdmin">
+                                            Administrative Circulars
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="categoryResearch">
+                                        <label class="form-check-label" for="categoryResearch">
+                                            Research Announcements
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Subscribe to Bulletins</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="site-footer"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/layout.js"></script>
+</body>
+</html>

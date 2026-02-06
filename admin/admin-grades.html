@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Management - Grand Gedeh University</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+   
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+</head>
+<body class="dashboard-container">
+    <!-- Header -->
+    <div id="admin-header"></div>
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <div id="admin-sidebar"></div>
+
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <div>
+                    <h1>Grade Management</h1>
+                    <p class="text-muted mb-0">Manage student grades, transcripts, and academic records</p>
+                </div>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        AU
+                    </div>
+                    <div>
+                        <h5 class="user-fullname mb-0">Admin User</h5>
+                        <p class="user-role mb-0">System Administrator</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Add Grades
+                        </button>
+                        <button class="btn btn-outline-primary">
+                            <i class="fas fa-file-import"></i> Import Grades
+                        </button>
+                        <button class="btn btn-outline-primary">
+                            <i class="fas fa-print"></i> Print Transcripts
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search grades...">
+                        <button class="btn btn-outline-secondary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h6>Total Courses</h6>
+                        <div class="stat-number">85</div>
+                        <div class="stat-change">
+                            With grades posted
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h6>Pending Grades</h6>
+                        <div class="stat-number">12</div>
+                        <div class="stat-change negative">
+                            <i class="fas fa-exclamation-circle"></i> Needs attention
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h6>Average GPA</h6>
+                        <div class="stat-number">3.42</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 0.05 from last semester
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h6>Honor Students</h6>
+                        <div class="stat-number">45</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 8% from last semester
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-table mb-4">
+                <div class="table-header">
+                    <h3>Recent Grade Submissions</h3>
+                    <div class="header-actions">
+                        <div class="dropdown">
+                            <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-filter"></i> Filter
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">All Grades</a></li>
+                                <li><a class="dropdown-item" href="#">Pending Approval</a></li>
+                                <li><a class="dropdown-item" href="#">Approved</a></li>
+                                <li><a class="dropdown-item" href="#">By Department</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-light btn-sm">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th>Instructor</th>
+                                <th>Students</th>
+                                <th>Average Grade</th>
+                                <th>Status</th>
+                                <th>Submitted</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>CSC301</strong><br>
+                                    <small>Database Systems</small>
+                                </td>
+                                <td>Dr. Jane Smith</td>
+                                <td>45</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge bg-success me-2">B+</span>
+                                        <span>3.33 GPA</span>
+                                    </div>
+                                </td>
+                                <td><span class="status-badge status-active">Approved</span></td>
+                                <td>2024-03-15</td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>MAT202</strong><br>
+                                    <small>Calculus II</small>
+                                </td>
+                                <td>Prof. John Davis</td>
+                                <td>60</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge bg-warning me-2">B</span>
+                                        <span>3.00 GPA</span>
+                                    </div>
+                                </td>
+                                <td><span class="status-badge status-active">Approved</span></td>
+                                <td>2024-03-14</td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>ENG201</strong><br>
+                                    <small>Technical Writing</small>
+                                </td>
+                                <td>Dr. Mary Johnson</td>
+                                <td>55</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge bg-primary me-2">A-</span>
+                                        <span>3.67 GPA</span>
+                                    </div>
+                                </td>
+                                <td><span class="status-badge status-pending">Pending</span></td>
+                                <td>2024-03-13</td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-success">
+                                            <i class="fas fa-check"></i>
+                                        </button>
+                                        <button class="btn btn-outline-danger">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>PHY102</strong><br>
+                                    <small>Physics II</small>
+                                </td>
+                                <td>Prof. Robert Brown</td>
+                                <td>40</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge bg-info me-2">B+</span>
+                                        <span>3.33 GPA</span>
+                                    </div>
+                                </td>
+                                <td><span class="status-badge status-pending">Pending</span></td>
+                                <td>2024-03-12</td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-success">
+                                            <i class="fas fa-check"></i>
+                                        </button>
+                                        <button class="btn btn-outline-danger">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>ITC201</strong><br>
+                                    <small>Networking</small>
+                                </td>
+                                <td>Dr. Sarah Williams</td>
+                                <td>35</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge bg-success me-2">A</span>
+                                        <span>4.00 GPA</span>
+                                    </div>
+                                </td>
+                                <td><span class="status-badge status-active">Approved</span></td>
+                                <td>2024-03-11</td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="dashboard-table h-100">
+                        <div class="table-header">
+                            <h3>Grade Distribution</h3>
+                        </div>
+                        <div class="p-4">
+                            <div class="grade-stats">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>A (90-100%)</span>
+                                    <span>25%</span>
+                                </div>
+                                <div class="progress mb-3" style="height: 10px;">
+                                    <div class="progress-bar bg-success" style="width: 25%"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>B (80-89%)</span>
+                                    <span>40%</span>
+                                </div>
+                                <div class="progress mb-3" style="height: 10px;">
+                                    <div class="progress-bar bg-primary" style="width: 40%"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>C (70-79%)</span>
+                                    <span>25%</span>
+                                </div>
+                                <div class="progress mb-3" style="height: 10px;">
+                                    <div class="progress-bar bg-info" style="width: 25%"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>D (60-69%)</span>
+                                    <span>8%</span>
+                                </div>
+                                <div class="progress mb-3" style="height: 10px;">
+                                    <div class="progress-bar bg-warning" style="width: 8%"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>F (Below 60%)</span>
+                                    <span>2%</span>
+                                </div>
+                                <div class="progress mb-3" style="height: 10px;">
+                                    <div class="progress-bar bg-danger" style="width: 2%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="dashboard-table h-100">
+                        <div class="table-header">
+                            <h3>Grade Change Requests</h3>
+                        </div>
+                        <div class="p-4">
+                            <div class="grade-requests">
+                                <div class="request-item mb-3 p-3 border rounded">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h6 class="mb-0">John Student</h6>
+                                        <small class="text-muted">CSC301</small>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="badge bg-warning">Request: B+ to A-</span>
+                                            <small class="d-block mt-1">Submitted: 2024-03-14</small>
+                                        </div>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-success">
+                                                <i class="fas fa-check"></i>
+                                            </button>
+                                            <button class="btn btn-outline-danger">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="request-item mb-3 p-3 border rounded">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h6 class="mb-0">Mary Scholar</h6>
+                                        <small class="text-muted">MAT202</small>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="badge bg-warning">Request: C+ to B</span>
+                                            <small class="d-block mt-1">Submitted: 2024-03-13</small>
+                                        </div>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-success">
+                                                <i class="fas fa-check"></i>
+                                            </button>
+                                            <button class="btn btn-outline-danger">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="request-item p-3 border rounded">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h6 class="mb-0">Robert Academic</h6>
+                                        <small class="text-muted">ENG201</small>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="badge bg-warning">Request: Incomplete to B</span>
+                                            <small class="d-block mt-1">Submitted: 2024-03-12</small>
+                                        </div>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-success">
+                                                <i class="fas fa-check"></i>
+                                            </button>
+                                            <button class="btn btn-outline-danger">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/dashboard.js"></script>
+    <script src="/js/layout.js"></script>
+</body>
+</html>

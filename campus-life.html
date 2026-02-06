@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Life - Grand Gedeh University</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lightbox CSS for gallery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+   <div id="site-header"></div>
+  
+    <!-- Page Header with Image -->
+    <section class="hero">
+        <div class="container text-center">
+            <h2 class="page-title">Campus Life</h2>
+            <p class="lead">Experience vibrant student life beyond the classroom</p>
+            <div class="mt-4">
+                <a href="#gallery" class="btn btn-light me-2"><i class="fas fa-images"></i> View Gallery</a>
+                <a href="#services" class="btn btn-outline-light"><i class="fas fa-play-circle"></i> Watch Campus Tour</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Highlights Gallery -->
+    <section class="section" id="highlights">
+        <div class="container">
+            <h2 class="section-title">Campus Highlights</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="campus-highlight">
+                        <img src="assets/images/campus-library.jpg" alt="GGU Library" onerror="this.src='https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="highlight-overlay">
+                            <h4>Modern Library</h4>
+                            <p>50,000+ volumes and digital resources</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="campus-highlight">
+                        <img src="assets/images/sports-complex.jpg" alt="Sports Complex" onerror="this.src='https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="highlight-overlay">
+                            <h4>Sports Complex</h4>
+                            <p>State-of-the-art athletic facilities</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="campus-highlight">
+                        <img src="assets/images/student-center.jpg" alt="Student Center" onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="highlight-overlay">
+                            <h4>Student Center</h4>
+                            <p>Hub of student activities and dining</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Life Navigation -->
+    <section class="section section-light">
+        <div class="container">
+            <h3 class="text-center mb-4">Explore Campus Life</h3>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <a href="#services" class="campus-nav-link">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-hands-helping fa-2x mb-3" style="color: var(--ggu-blue);"></i>
+                                <h5>Student Services</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <a href="#facilities" class="campus-nav-link">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-building fa-2x mb-3" style="color: var(--ggu-green);"></i>
+                                <h5>Campus Facilities</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <a href="#organizations" class="campus-nav-link">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-users fa-2x mb-3" style="color: var(--ggu-orange);"></i>
+                                <h5>Student Organizations</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <a href="#gallery" class="campus-nav-link">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-images fa-2x mb-3" style="color: var(--ggu-blue);"></i>
+                                <h5>Campus Gallery</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Support Services -->
+    <section class="section" id="services">
+        <div class="container">
+            <h2 class="section-title">Student Support Services</h2>
+            
+            <div class="featured-image">
+                <img src="assets/images/student-services.jpg" alt="Student Support Services" onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
+                <div class="image-caption">Comprehensive support services ensure student success and wellbeing</div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="service-icon mb-3">
+                                <i class="fas fa-graduation-cap fa-2x" style="color: var(--ggu-blue);"></i>
+                            </div>
+                            <h4 class="card-title">Academic Support</h4>
+                            <div class="image-grid mb-3">
+                                <img src="assets/images/tutoring-center.jpg" alt="Tutoring Center" onerror="this.src='https://images.unsplash.com/photo-1513258496099-48168024aec0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                                <img src="assets/images/writing-center.jpg" alt="Writing Center" onerror="this.src='https://images.unsplash.com/photo-1456513080510-34473c6a0d5a?ixlib=rb-4.0.3&auto=format&fit=crop&w-400&q=80'">
+                                <img src="assets/images/library-study.jpg" alt="Library Study" onerror="this.src='https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                            </div>
+                            <ul>
+                                <li><strong>Tutoring Center:</strong> Free tutoring in all major subjects</li>
+                                <li><strong>Writing Center:</strong> Assistance with academic writing</li>
+                                <li><strong>Study Skills Workshops:</strong> Time management and study techniques</li>
+                                <li><strong>Academic Advising:</strong> Personalized course planning</li>
+                                <li><strong>Library Services:</strong> Research assistance and resources</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="service-icon mb-3">
+                                <i class="fas fa-heart fa-2x" style="color: var(--ggu-green);"></i>
+                            </div>
+                            <h4 class="card-title">Health & Wellness</h4>
+                            <div class="image-grid mb-3">
+                                <img src="assets/images/health-center.jpg" alt="Health Center" onerror="this.src='https://images.unsplash.com/photo-1516549655669-df4f6a0a8f61?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                                <img src="assets/images/counseling.jpg" alt="Counseling Services" onerror="this.src='https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                                <img src="assets/images/fitness-center.jpg" alt="Fitness Center" onerror="this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                            </div>
+                            <ul>
+                                <li><strong>Campus Health Center:</strong> Medical services and consultations</li>
+                                <li><strong>Counseling Services:</strong> Mental health support</li>
+                                <li><strong>Wellness Programs:</strong> Stress management workshops</li>
+                                <li><strong>Sports Facilities:</strong> Gym, sports fields, and fitness classes</li>
+                                <li><strong>Nutrition Services:</strong> Healthy eating guidance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="service-icon mb-3">
+                                <i class="fas fa-briefcase fa-2x" style="color: var(--ggu-orange);"></i>
+                            </div>
+                            <h4 class="card-title">Career Services</h4>
+                            <div class="image-grid mb-3">
+                                <img src="assets/images/career-fair.jpg" alt="Career Fair" onerror="this.src='https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                                <img src="assets/images/resume-workshop.jpg" alt="Resume Workshop" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                                <img src="assets/images/networking-event.jpg" alt="Networking Event" onerror="this.src='https://images.unsplash.com/photo-1551836026-d5c2e060c44c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                            </div>
+                            <ul>
+                                <li><strong>Career Counseling:</strong> Resume writing and interview preparation</li>
+                                <li><strong>Job Fairs:</strong> Annual career fairs with employers</li>
+                                <li><strong>Internship Placement:</strong> Industry connections and opportunities</li>
+                                <li><strong>Alumni Networking:</strong> Connections with successful graduates</li>
+                                <li><strong>Professional Development:</strong> Workshops and seminars</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Student Housing</h4>
+                            <div class="featured-image mb-3">
+                                <img src="assets/images/dormitory.jpg" alt="Student Dormitory" onerror="this.src='https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                            </div>
+                            <p>GGU offers comfortable and secure on-campus housing options:</p>
+                            <ul>
+                                <li><strong>Residence Halls:</strong> Separate halls for male and female students</li>
+                                <li><strong>Room Types:</strong> Single, double, and triple occupancy rooms</li>
+                                <li><strong>Amenities:</strong> Wi-Fi, study lounges, laundry facilities</li>
+                                <li><strong>Security:</strong> 24/7 security and CCTV surveillance</li>
+                                <li><strong>Resident Assistants:</strong> Trained student staff for support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Financial Aid & Scholarships</h4>
+                            <div class="featured-image mb-3">
+                                <img src="assets/images/scholarship-award.jpg" alt="Scholarship Award Ceremony" onerror="this.src='https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                            </div>
+                            <p>Various financial support options available:</p>
+                            <ul>
+                                <li><strong>Need-Based Scholarships:</strong> For students with financial constraints</li>
+                                <li><strong>Merit Scholarships:</strong> Based on academic achievement</li>
+                                <li><strong>Government Sponsorships:</strong> Through Ministry of Education</li>
+                                <li><strong>Work-Study Program:</strong> Campus employment opportunities</li>
+                                <li><strong>External Scholarships:</strong> Partnership with donor organizations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Facilities -->
+    <section class="section section-light" id="facilities">
+        <div class="container">
+            <h2 class="section-title">Campus Facilities</h2>
+            
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="featured-image">
+                        <img src="assets/images/science-lab.jpg" alt="Science Laboratory" onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="image-caption">State-of-the-art science laboratories for hands-on learning</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="featured-image">
+                        <img src="assets/images/computer-lab.jpg" alt="Computer Laboratory" onerror="this.src='https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="image-caption">Modern computer labs with high-speed internet access</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Academic Facilities</h4>
+                            <div class="facility-item">
+                                <i class="fas fa-book"></i>
+                                <div>
+                                    <h6>University Library</h6>
+                                    <p>Modern library with 50,000+ volumes, digital resources, and study spaces</p>
+                                </div>
+                            </div>
+                            <div class="facility-item">
+                                <i class="fas fa-flask"></i>
+                                <div>
+                                    <h6>Science Laboratories</h6>
+                                    <p>Well-equipped labs for biology, chemistry, physics, and engineering</p>
+                                </div>
+                            </div>
+                            <div class="facility-item">
+                                <i class="fas fa-laptop"></i>
+                                <div>
+                                    <h6>Computer Centers</h6>
+                                    <p>Multiple computer labs with high-speed internet access</p>
+                                </div>
+                            </div>
+                            <div class="facility-item">
+                                <i class="fas fa-chalkboard"></i>
+                                <div>
+                                    <h6>Smart Classrooms</h6>
+                                    <p>Technology-enabled classrooms for interactive learning</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Recreational Facilities</h4>
+                            <div class="facility-item">
+                                <i class="fas fa-dumbbell"></i>
+                                <div>
+                                    <h6>Sports Complex</h6>
+                                    <p>Gym, basketball court, volleyball court, and football field</p>
+                                </div>
+                            </div>
+                            <div class="facility-item">
+                                <i class="fas fa-utensils"></i>
+                                <div>
+                                    <h6>Student Center</h6>
+                                    <p>Cafeteria, lounge areas, and student activity spaces</p>
+                                </div>
+                            </div>
+                            <div class="facility-item">
+                                <i class="fas fa-tree"></i>
+                                <div>
+                                    <h6>Green Spaces</h6>
+                                    <p>Beautiful gardens and outdoor study areas</p>
+                                </div>
+                            </div>
+                            <div class="facility-item">
+                                <i class="fas fa-theater-masks"></i>
+                                <div>
+                                    <h6>Cultural Center</h6>
+                                    <p>Auditorium for performances and cultural events</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="fas fa-wifi fa-3x mb-3" style="color: var(--ggu-blue);"></i>
+                            <h4>Technology Infrastructure</h4>
+                            <p>Campus-wide Wi-Fi, digital learning platforms, and IT support services</p>
+                            <div class="image-grid mt-3">
+                                <img src="assets/images/campus-wifi.jpg" alt="Campus Wi-Fi" onerror="this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                                <img src="assets/images/digital-learning.jpg" alt="Digital Learning" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="fas fa-shield-alt fa-3x mb-3" style="color: var(--ggu-green);"></i>
+                            <h4>Safety & Security</h4>
+                            <p>24/7 security patrols, emergency response systems, and campus safety programs</p>
+                            <div class="image-grid mt-3">
+                                <img src="assets/images/campus-security.jpg" alt="Campus Security" onerror="this.src='https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                                <img src="assets/images/emergency-services.jpg" alt="Emergency Services" onerror="this.src='https://images.unsplash.com/photo-1584118624012-df056829fbd0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="fas fa-bus fa-3x mb-3" style="color: var(--ggu-orange);"></i>
+                            <h4>Transportation</h4>
+                            <p>Campus shuttle services and secure parking facilities for students</p>
+                            <div class="image-grid mt-3">
+                                <img src="assets/images/campus-shuttle.jpg" alt="Campus Shuttle" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                                <img src="assets/images/student-parking.jpg" alt="Student Parking" onerror="this.src='https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Organizations -->
+    <section class="section" id="organizations">
+        <div class="container">
+            <h2 class="section-title">Student Organizations</h2>
+            
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <div class="featured-image">
+                        <img src="assets/images/student-org-meeting.jpg" alt="Student Organization Meeting" onerror="this.src='https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
+                        <div class="image-caption">Active student organizations foster leadership and community engagement</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="student-testimonial">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/images/student-leader.jpg" alt="Student Leader" class="testimonial-avatar" onerror="this.src='https://images.unsplash.com/photo-1494790108755-2616b786d4d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                            <div>
+                                <h5>Sarah Johnson</h5>
+                                <p class="text-muted">President, Student Government</p>
+                            </div>
+                        </div>
+                        <p>"Joining student organizations at GGU transformed my university experience. I developed leadership skills, made lifelong friends, and contributed to meaningful campus initiatives."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>Get Involved!</h3>
+                    <p>GGU offers numerous student organizations where you can develop leadership skills, pursue interests, and build lifelong friendships.</p>
+                    
+                    <div class="organization-categories mt-4">
+                        <div class="category-card">
+                            <h5><i class="fas fa-graduation-cap"></i> Academic & Professional</h5>
+                            <div class="org-list">
+                                <div class="org-item">
+                                    <h6>GGU Debate Society</h6>
+                                    <p>Develop public speaking and critical thinking skills</p>
+                                </div>
+                                <div class="org-item">
+                                    <h6>Science & Engineering Club</h6>
+                                    <p>For students interested in scientific research and innovation</p>
+                                </div>
+                                <div class="org-item">
+                                    <h6>Business Students Association</h6>
+                                    <p>Networking and professional development for business students</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="category-card">
+                            <h5><i class="fas fa-music"></i> Cultural & Arts</h5>
+                            <div class="image-grid mb-3">
+                                <img src="assets/images/cultural-troupe.jpg" alt="Cultural Troupe" onerror="this.src='https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                                <img src="assets/images/arts-society.jpg" alt="Arts Society" onerror="this.src='https://images.unsplash.com/photo-1544984243-ec57ea16fe25?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                            </div>
+                            <div class="org-list">
+                                <div class="org-item">
+                                    <h6>GGU Cultural Troupe</h6>
+                                    <p>Preserving and promoting Liberian cultural heritage</p>
+                                </div>
+                                <div class="org-item">
+                                    <h6>Creative Arts Society</h6>
+                                    <p>For students interested in visual arts, music, and drama</p>
+                                </div>
+                                <div class="org-item">
+                                    <h6>International Students Association</h6>
+                                    <p>Support and community for international students</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="category-card">
+                            <h5><i class="fas fa-handshake"></i> Service & Advocacy</h5>
+                            <div class="image-grid mb-3">
+                                <img src="assets/images/volunteer-work.jpg" alt="Volunteer Work" onerror="this.src='https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                                <img src="assets/images/environmental-club.jpg" alt="Environmental Club" onerror="this.src='https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                            </div>
+                            <div class="org-list">
+                                <div class="org-item">
+                                    <h6>GGU Volunteer Corps</h6>
+                                    <p>Community service and outreach programs</p>
+                                </div>
+                                <div class="org-item">
+                                    <h6>Environmental Club</h6>
+                                    <p>Promoting sustainability and environmental awareness</p>
+                                </div>
+                                <div class="org-item">
+                                    <h6>Student Government Association</h6>
+                                    <p>Representing student interests and organizing events</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title">Students' Union Government (SUG)</h4>
+                            <div class="featured-image mb-3">
+                                <img src="assets/images/sug-members.jpg" alt="SUG Members" onerror="this.src='https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                            </div>
+                            <p>The official student governance body representing all GGU students:</p>
+                            <ul>
+                                <li><strong>President:</strong> John M. Johnson</li>
+                                <li><strong>Vice President:</strong> Mary S. Freeman</li>
+                                <li><strong>Secretary General:</strong> Samuel K. Brown</li>
+                                <li><strong>Financial Secretary:</strong> Agnes T. Williams</li>
+                            </ul>
+                            <p class="mt-3"><strong>Office:</strong> Student Center, Room 101</p>
+                            <p><strong>Contact:</strong> sug@ggu.edu.lr</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Start Your Own Organization</h4>
+                            <p>Interested in starting a new student organization?</p>
+                            <ul>
+                                <li>Minimum of 10 interested students</li>
+                                <li>Faculty advisor required</li>
+                                <li>Constitution and bylaws</li>
+                                <li>Approval from Student Affairs Office</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary mt-3"><i class="fas fa-plus-circle"></i> Apply to Start a Club</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Gallery -->
+    <section class="section section-light" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Campus Gallery</h2>
+            <p class="text-center mb-4">Explore life at GGU through our photo collection</p>
+            
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <a href="assets/images/gallery-campus-aerial.jpg" data-lightbox="campus-gallery" data-title="GGU Campus Aerial View">
+                        <img src="assets/images/gallery-campus-aerial.jpg" alt="Campus Aerial View" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                    </a>
+                    <div class="gallery-caption">Campus Aerial View</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <a href="assets/images/gallery-classroom.jpg" data-lightbox="campus-gallery" data-title="Modern Classroom">
+                        <img src="assets/images/gallery-classroom.jpg" alt="Modern Classroom" onerror="this.src='https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                    </a>
+                    <div class="gallery-caption">Modern Classroom</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <a href="assets/images/gallery-graduation.jpg" data-lightbox="campus-gallery" data-title="Graduation Ceremony">
+                        <img src="assets/images/gallery-graduation.jpg" alt="Graduation Ceremony" onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                    </a>
+                    <div class="gallery-caption">Graduation Ceremony</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <a href="assets/images/gallery-sports.jpg" data-lightbox="campus-gallery" data-title="Sports Events">
+                        <img src="assets/images/gallery-sports.jpg" alt="Sports Events" onerror="this.src='https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                    </a>
+                    <div class="gallery-caption">Sports Events</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <a href="assets/images/gallery-cafeteria.jpg" data-lightbox="campus-gallery" data-title="Student Cafeteria">
+                        <img src="assets/images/gallery-cafeteria.jpg" alt="Student Cafeteria" onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                    </a>
+                    <div class="gallery-caption">Student Cafeteria</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <a href="assets/images/gallery-library.jpg" data-lightbox="campus-gallery" data-title="University Library">
+                        <img src="assets/images/gallery-library.jpg" alt="University Library" onerror="this.src='https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                    </a>
+                    <div class="gallery-caption">University Library</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <a href="assets/images/gallery-research.jpg" data-lightbox="campus-gallery" data-title="Research Laboratory">
+                        <img src="assets/images/gallery-research.jpg" alt="Research Laboratory" onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                    </a>
+                    <div class="gallery-caption">Research Laboratory</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <a href="assets/images/gallery-cultural.jpg" data-lightbox="campus-gallery" data-title="Cultural Performance">
+                        <img src="assets/images/gallery-cultural.jpg" alt="Cultural Performance" onerror="this.src='https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                    </a>
+                    <div class="gallery-caption">Cultural Performance</div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary"><i class="fas fa-camera"></i> View More Photos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Events -->
+    <section class="section" id="events">
+        <div class="container">
+            <h2 class="section-title">Campus Events Calendar</h2>
+            
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <div class="featured-image">
+                        <img src="assets/images/campus-event.jpg" alt="Campus Event" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
+                        <div class="image-caption">Annual cultural festival celebrating diversity and creativity</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="student-testimonial">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/images/event-organizer.jpg" alt="Event Organizer" class="testimonial-avatar" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                            <div>
+                                <h5>Michael Roberts</h5>
+                                <p class="text-muted">Event Coordinator</p>
+                            </div>
+                        </div>
+                        <p>"Our campus events bring the GGU community together. From academic seminars to cultural celebrations, there's always something exciting happening on campus."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Upcoming Events</h4>
+                            <div class="event-list">
+                                <div class="event-item">
+                                    <div class="event-date">
+                                        <span class="event-day">15</span>
+                                        <span class="event-month">MAR</span>
+                                    </div>
+                                    <div class="event-details">
+                                        <h6>Career Fair 2024</h6>
+                                        <p>Student Center, 9:00 AM - 4:00 PM</p>
+                                        <small class="text-muted">Meet top employers and explore career opportunities</small>
+                                    </div>
+                                </div>
+                                <div class="event-item">
+                                    <div class="event-date">
+                                        <span class="event-day">22</span>
+                                        <span class="event-month">MAR</span>
+                                    </div>
+                                    <div class="event-details">
+                                        <h6>Cultural Festival</h6>
+                                        <p>Main Auditorium, 6:00 PM</p>
+                                        <small class="text-muted">Celebration of diversity with performances and food</small>
+                                    </div>
+                                </div>
+                                <div class="event-item">
+                                    <div class="event-date">
+                                        <span class="event-day">05</span>
+                                        <span class="event-month">APR</span>
+                                    </div>
+                                    <div class="event-details">
+                                        <h6>Research Symposium</h6>
+                                        <p>Science Building, All Day</p>
+                                        <small class="text-muted">Presentations of student and faculty research</small>
+                                    </div>
+                                </div>
+                                <div class="event-item">
+                                    <div class="event-date">
+                                        <span class="event-day">12</span>
+                                        <span class="event-month">APR</span>
+                                    </div>
+                                    <div class="event-details">
+                                        <h6>Sports Tournament</h6>
+                                        <p>Sports Complex, 8:00 AM</p>
+                                        <small class="text-muted">Inter-college competitions in various sports</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Annual Events & Traditions</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="annual-event">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <div class="event-icon">
+                                                <i class="fas fa-star fa-2x"></i>
+                                            </div>
+                                            <div class="ms-3">
+                                                <h5>Founder's Day</h5>
+                                            </div>
+                                        </div>
+                                        <p>Celebrating the establishment of GGU with ceremonies, awards, and cultural performances.</p>
+                                        <p class="event-date"><i class="fas fa-calendar-alt"></i> October 15</p>
+                                    </div>
+                                    <div class="annual-event">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <div class="event-icon">
+                                                <i class="fas fa-graduation-cap fa-2x"></i>
+                                            </div>
+                                            <div class="ms-3">
+                                                <h5>Graduation Ceremony</h5>
+                                            </div>
+                                        </div>
+                                        <p>Annual commencement celebrating student achievements and welcoming new alumni.</p>
+                                        <p class="event-date"><i class="fas fa-calendar-alt"></i> June 30</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="annual-event">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <div class="event-icon">
+                                                <i class="fas fa-music fa-2x"></i>
+                                            </div>
+                                            <div class="ms-3">
+                                                <h5>GGU Arts Festival</h5>
+                                            </div>
+                                        </div>
+                                        <p>Week-long celebration of arts, music, drama, and creative expression.</p>
+                                        <p class="event-date"><i class="fas fa-calendar-alt"></i> November 5-12</p>
+                                    </div>
+                                    <div class="annual-event">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <div class="event-icon">
+                                                <i class="fas fa-trophy fa-2x"></i>
+                                            </div>
+                                            <div class="ms-3">
+                                                <h5>Sports Day</h5>
+                                            </div>
+                                        </div>
+                                        <p>Inter-college competitions and athletic demonstrations.</p>
+                                        <p class="event-date"><i class="fas fa-calendar-alt"></i> March 20</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h4 class="card-title">Student Activities Board</h4>
+                            <p>The Student Activities Board plans and coordinates campus events throughout the year:</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li><i class="fas fa-film"></i> Weekly movie nights</li>
+                                        <li><i class="fas fa-microphone"></i> Guest speaker series</li>
+                                        <li><i class="fas fa-chalkboard-teacher"></i> Workshops and seminars</li>
+                                        <li><i class="fas fa-hands-helping"></i> Community service projects</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li><i class="fas fa-users"></i> Social mixers and dances</li>
+                                        <li><i class="fas fa-medal"></i> Academic competitions</li>
+                                        <li><i class="fas fa-globe-africa"></i> Cultural exchange programs</li>
+                                        <li><i class="fas fa-flag"></i> Leadership training</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="text-center mt-4">
+                                <a href="#" class="btn btn-primary"><i class="fas fa-calendar"></i> View Full Events Calendar</a>
+                                <a href="#" class="btn btn-outline-primary ms-2"><i class="fas fa-lightbulb"></i> Submit Event Proposal</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="site-footer"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Lightbox JS for gallery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/layout.js"></script>
+</body>
+</html>

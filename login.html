@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Grand Gedeh University</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <div id="site-header"></div>
+
+    <!-- Page Header -->
+    <section class="hero">
+        <div class="container">
+            <h2 class="page-title">Login & Registration</h2>
+            <p class="lead">Access your student portal or create a new account</p>
+        </div>
+    </section>
+
+    <!-- Login/Registration Tabs -->
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="auth-tabs">
+                        <ul class="nav nav-tabs" id="authTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab">
+                                    <i class="fas fa-sign-in-alt"></i> Login
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab">
+                                    <i class="fas fa-user-plus"></i> Register
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="recover-tab" data-bs-toggle="tab" data-bs-target="#recover" type="button" role="tab">
+                                    <i class="fas fa-key"></i> Password Recovery
+                                </button>
+                            </li>
+                        </ul>
+                        
+                        <div class="tab-content" id="authTabsContent">
+                            <!-- Login Form -->
+                            <div class="tab-pane fade show active" id="login" role="tabpanel">
+                                <div class="card mt-4">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4">Login to Your Account</h4>
+                                        
+                                        <form id="loginForm">
+                                            <div class="mb-3">
+                                                <label for="loginEmail" class="form-label">Email Address</label>
+                                                <input type="email" class="form-control" id="loginEmail" required>
+                                                <div class="form-text">Use your GGU email (student@ggu.edu.lr)</div>
+                                            </div>
+                                            
+                                            <div class="mb-3">
+                                                <label for="loginPassword" class="form-label">Password</label>
+                                                <div class="input-group">
+                                                    <input type="password" class="form-control" id="loginPassword" required>
+                                                    <button class="btn btn-outline-secondary toggle-password" type="button">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                                            </div>
+                                            
+                                            <div class="d-grid gap-2">
+                                                <button type="submit" class="btn btn-primary btn-lg">
+                                                    <i class="fas fa-sign-in-alt"></i> Login
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="text-center mt-3">
+                                                <a href="#" class="text-decoration-none" data-bs-target="#recover" data-bs-toggle="tab">
+                                                    Forgot your password?
+                                                </a>
+                                            </div>
+                                        </form>
+                                        
+                                        <div class="login-demo mt-4">
+                                            <h6>Demo Accounts:</h6>
+                                            <div class="demo-accounts">
+                                                <div class="demo-account">
+                                                    <strong>Student:</strong> student@ggu.edu.lr / student123
+                                                </div>
+                                                <div class="demo-account">
+                                                    <strong>Admin:</strong> admin@ggu.edu.lr / admin123
+                                                </div>
+                                                <div class="demo-account">
+                                                    <strong>Faculty:</strong> faculty@ggu.edu.lr / faculty123
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Registration Form -->
+                            <div class="tab-pane fade" id="register" role="tabpanel">
+                                <div class="card mt-4">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4">Create New Account</h4>
+                                        
+                                        <form id="registerForm">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="registerName" class="form-label">Full Name</label>
+                                                    <input type="text" class="form-control" id="registerName" required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="registerEmail" class="form-label">Email Address</label>
+                                                    <input type="email" class="form-control" id="registerEmail" required>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3" id="studentIdField" style="display: none;">
+                                                    <label for="studentId" class="form-label">Student ID (If available)</label>
+                                                    <input type="text" class="form-control" id="studentId">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="registerPassword" class="form-label">Password</label>
+                                                    <div class="input-group">
+                                                        <input type="password" class="form-control" id="registerPassword" required>
+                                                        <button class="btn btn-outline-secondary toggle-password" type="button">
+                                                            <i class="fas fa-eye"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div id="passwordStrength" class="form-text"></div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                                    <div class="input-group">
+                                                        <input type="password" class="form-control" id="confirmPassword" required>
+                                                        <button class="btn btn-outline-secondary toggle-password" type="button">
+                                                            <i class="fas fa-eye"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="terms" required>
+                                                <label class="form-check-label" for="terms">
+                                                    I agree to the <a href="#" class="text-decoration-none">Terms of Service</a> and <a href="#" class="text-decoration-none">Privacy Policy</a>
+                                                </label>
+                                            </div>
+                                            
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="newsletterOptIn">
+                                                <label class="form-check-label" for="newsletterOptIn">
+                                                    Subscribe to university newsletter
+                                                </label>
+                                            </div>
+                                            
+                                            <div class="d-grid gap-2">
+                                                <button type="submit" class="btn btn-primary btn-lg">
+                                                    <i class="fas fa-user-plus"></i> Create Account
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="text-center mt-3">
+                                                <p>Already have an account? <a href="#" class="text-decoration-none" data-bs-target="#login" data-bs-toggle="tab">Login here</a></p>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Password Recovery -->
+                            <div class="tab-pane fade" id="recover" role="tabpanel">
+                                <div class="card mt-4">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4">Password Recovery</h4>
+                                        
+                                        <form id="recoveryForm">
+                                            <div class="mb-4">
+                                                <p>Enter your email address and we'll send you instructions to reset your password.</p>
+                                            </div>
+                                            
+                                            <div class="mb-3">
+                                                <label for="recoveryEmail" class="form-label">Email Address</label>
+                                                <input type="email" class="form-control" id="recoveryEmail" required>
+                                            </div>
+                                            
+                                            <div class="d-grid gap-2">
+                                                <button type="submit" class="btn btn-primary btn-lg">
+                                                    <i class="fas fa-paper-plane"></i> Send Recovery Email
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="text-center mt-3">
+                                                <p>Remember your password? <a href="#" class="text-decoration-none" data-bs-target="#login" data-bs-toggle="tab">Login here</a></p>
+                                            </div>
+                                        </form>
+                                        
+                                        <div class="recovery-info mt-4">
+                                            <h6>Need Help?</h6>
+                                            <p>If you're having trouble accessing your account, contact our support team:</p>
+                                            <ul>
+                                                <li><i class="fas fa-envelope"></i> support@ggu.edu.lr</li>
+                                                <li><i class="fas fa-phone"></i> +231 88 123 4567</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portal Features -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Student Portal Features</h2>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-book-open fa-3x" style="color: var(--ggu-blue);"></i>
+                            </div>
+                            <h4 class="card-title">Course Management</h4>
+                            <ul class="text-start">
+                                <li>View course schedules</li>
+                                <li>Register for classes</li>
+                                <li>Access course materials</li>
+                                <li>Submit assignments</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-chart-line fa-3x" style="color: var(--ggu-green);"></i>
+                            </div>
+                            <h4 class="card-title">Academic Records</h4>
+                            <ul class="text-start">
+                                <li>View grades and transcripts</li>
+                                <li>Track academic progress</li>
+                                <li>Check graduation status</li>
+                                <li>Download reports</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-comments fa-3x" style="color: var(--ggu-orange);"></i>
+                            </div>
+                            <h4 class="card-title">Communication</h4>
+                            <ul class="text-start">
+                                <li>University announcements</li>
+                                <li>Faculty messages</li>
+                                <li>Discussion forums</li>
+                                <li>Event notifications</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Information -->
+    <section class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3>Account Security</h3>
+                    <p>Your account security is important to us. Here are some tips to keep your account safe:</p>
+                    
+                    <div class="security-tips mt-4">
+                        <div class="security-tip">
+                            <h5><i class="fas fa-shield-alt text-success"></i> Strong Passwords</h5>
+                            <p>Use a combination of letters, numbers, and special characters.</p>
+                        </div>
+                        <div class="security-tip">
+                            <h5><i class="fas fa-user-lock text-primary"></i> Account Protection</h5>
+                            <p>Never share your login credentials with anyone.</p>
+                        </div>
+                        <div class="security-tip">
+                            <h5><i class="fas fa-sign-out-alt text-warning"></i> Secure Logout</h5>
+                            <p>Always log out when using shared or public computers.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">
+                            <h4 class="card-title">Need Assistance?</h4>
+                            <p>Our support team is here to help with any login or account issues.</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-headset"></i> Support: support@ggu.edu.lr</li>
+                                <li class="mb-2"><i class="fas fa-phone"></i> Phone: +231 88 123 4567</li>
+                                <li><i class="fas fa-clock"></i> Hours: Mon-Fri, 8:00 AM - 5:00 PM</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="site-footer"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/layout.js"></script>
+</body>
+</html>

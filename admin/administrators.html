@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Management - Grand Gedeh University</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+   
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+</head>
+<body class="dashboard-container">
+    <!-- Header -->
+    <div id="admin-header"></div>
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <div id="admin-sidebar"></div>
+
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <div>
+                    <h1>Administrator Management</h1>
+                    <p class="text-muted mb-0">Manage system administrators and their permissions</p>
+                </div>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        AU
+                    </div>
+                    <div>
+                        <h5 class="user-fullname mb-0">Admin User</h5>
+                        <p class="user-role mb-0">System Administrator</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-user-plus"></i> Add Administrator
+                        </button>
+                        <button class="btn btn-outline-primary">
+                            <i class="fas fa-key"></i> Reset Passwords
+                        </button>
+                        <button class="btn btn-outline-primary">
+                            <i class="fas fa-file-audit"></i> Audit Log
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search administrators...">
+                        <button class="btn btn-outline-secondary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h6>Total Admins</h6>
+                        <div class="stat-number">30</div>
+                        <div class="stat-change">
+                            System access
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h6>Super Admins</h6>
+                        <div class="stat-number">5</div>
+                        <div class="stat-change">
+                            Full system access
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h6>Department Admins</h6>
+                        <div class="stat-number">15</div>
+                        <div class="stat-change">
+                            Limited access
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h6>Active Sessions</h6>
+                        <div class="stat-number">8</div>
+                        <div class="stat-change">
+                            Currently online
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-table mb-4">
+                <div class="table-header">
+                    <h3>System Administrators</h3>
+                    <div class="header-actions">
+                        <div class="dropdown">
+                            <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-filter"></i> Filter
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">All Administrators</a></li>
+                                <li><a class="dropdown-item" href="#">Super Admins</a></li>
+                                <li><a class="dropdown-item" href="#">Department Admins</a></li>
+                                <li><a class="dropdown-item" href="#">Active Only</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-light btn-sm">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Admin ID</th>
+                                <th>Name</th>
+                                <th>Role</th>
+                                <th>Department</th>
+                                <th>Permissions</th>
+                                <th>Last Login</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>SUPER001</strong></td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar-sm me-2">AU</div>
+                                        <div>Admin User</div>
+                                    </div>
+                                </td>
+                                <td><span class="badge bg-danger">Super Admin</span></td>
+                                <td>System Administration</td>
+                                <td>Full System Access</td>
+                                <td>Today, 10:30 AM</td>
+                                <td><span class="status-badge status-active">Online</span></td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>ADMIN002</strong></td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar-sm me-2">CS</div>
+                                        <div>Chief Administrator</div>
+                                    </div>
+                                </td>
+                                <td><span class="badge bg-danger">Super Admin</span></td>
+                                <td>System Administration</td>
+                                <td>Full System Access</td>
+                                <td>Yesterday, 4:15 PM</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>DEPT101</strong></td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar-sm me-2">RA</div>
+                                        <div>Registrar Admin</div>
+                                    </div>
+                                </td>
+                                <td><span class="badge bg-primary">Department Admin</span></td>
+                                <td>Registrar's Office</td>
+                                <td>Student Management</td>
+                                <td>Today, 9:00 AM</td>
+                                <td><span class="status-badge status-active">Online</span></td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>DEPT102</strong></td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar-sm me-2">FA</div>
+                                        <div>Finance Admin</div>
+                                    </div>
+                                </td>
+                                <td><span class="badge bg-primary">Department Admin</span></td>
+                                <td>Finance Office</td>
+                                <td>Financial Records</td>
+                                <td>Today, 8:45 AM</td>
+                                <td><span class="status-badge status-active">Online</span></td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>DEPT103</strong></td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar-sm me-2">HA</div>
+                                        <div>HR Admin</div>
+                                    </div>
+                                </td>
+                                <td><span class="badge bg-primary">Department Admin</span></td>
+                                <td>Human Resources</td>
+                                <td>Staff Management</td>
+                                <td>Yesterday, 5:30 PM</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="dashboard-table h-100">
+                        <div class="table-header">
+                            <h3>Permission Management</h3>
+                        </div>
+                        <div class="p-4">
+                            <div class="permission-list">
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="perm1" checked>
+                                    <label class="form-check-label" for="perm1">
+                                        User Management (Create, Edit, Delete Users)
+                                    </label>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="perm2" checked>
+                                    <label class="form-check-label" for="perm2">
+                                        Course Management (Add/Edit Courses)
+                                    </label>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="perm3">
+                                    <label class="form-check-label" for="perm3">
+                                        Financial Management (View/Edit Financials)
+                                    </label>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="perm4">
+                                    <label class="form-check-label" for="perm4">
+                                        System Configuration (Settings)
+                                    </label>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="perm5" checked>
+                                    <label class="form-check-label" for="perm5">
+                                        View Reports and Analytics
+                                    </label>
+                                </div>
+                                <div class="text-end mt-3">
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-save"></i> Save Permissions
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="dashboard-table h-100">
+                        <div class="table-header">
+                            <h3>Security Alerts</h3>
+                        </div>
+                        <div class="p-4">
+                            <div class="alert alert-warning">
+                                <h6><i class="fas fa-exclamation-triangle"></i> Unusual Login Activity</h6>
+                                <small>Multiple failed login attempts detected from unknown IP</small>
+                                <div class="mt-2">
+                                    <button class="btn btn-sm btn-outline-warning">Investigate</button>
+                                </div>
+                            </div>
+                            <div class="alert alert-info">
+                                <h6><i class="fas fa-info-circle"></i> Password Reset Required</h6>
+                                <small>3 administrator passwords need to be reset (over 90 days old)</small>
+                                <div class="mt-2">
+                                    <button class="btn btn-sm btn-outline-info">View Details</button>
+                                </div>
+                            </div>
+                            <div class="alert alert-success">
+                                <h6><i class="fas fa-check-circle"></i> System Audit Complete</h6>
+                                <small>Last security audit completed successfully on 2024-03-14</small>
+                                <div class="mt-2">
+                                    <button class="btn btn-sm btn-outline-success">View Report</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+     <!-- Custom JS -->
+    <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/dashboard.js"></script>
+    <script src="/js/layout.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades - Grand Gedeh University</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+</head>
+<body class="dashboard-container">
+    <!-- Header -->
+    <div id="student-header"></div>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <div id="student-sidebar"></div>
+        <!-- End of Sidebar -->
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h1>Grades & Transcript</h1>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        JS
+                    </div>
+                    <div>
+                        <h5 class="user-fullname mb-0">John Student</h5>
+                        <p class="user-role mb-0">Student</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GPA Summary -->
+            <div class="dashboard-grid mb-4">
+                <div class="dashboard-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Current GPA</h4>
+                    <div class="card-stat" data-stat="currentGPA">3.45</div>
+                    <p class="card-label">Out of 4.0</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h4>Cumulative GPA</h4>
+                    <div class="card-stat" data-stat="cumulativeGPA">3.52</div>
+                    <p class="card-label">Overall</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>Credits Earned</h4>
+                    <div class="card-stat" data-stat="creditsEarned">90</div>
+                    <p class="card-label">Out of 120 required</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h4>Completion</h4>
+                    <div class="card-stat" data-stat="completion">75%</div>
+                    <p class="card-label">Program completion</p>
+                </div>
+            </div>
+
+            <!-- Grade Navigation -->
+            <div class="grade-tabs mb-4">
+                <ul class="nav nav-tabs" id="gradeTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="current-tab" data-bs-toggle="tab" data-bs-target="#current" type="button">
+                            Current Semester
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="previous-tab" data-bs-toggle="tab" data-bs-target="#previous" type="button">
+                            Previous Semesters
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="unofficial-tab" data-bs-toggle="tab" data-bs-target="#unofficial" type="button">
+                            Unofficial Transcript
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Grade Content -->
+            <div class="tab-content" id="gradeTabsContent">
+                <!-- Current Semester Grades -->
+                <div class="tab-pane fade show active" id="current" role="tabpanel">
+                    <div class="dashboard-table mb-4">
+                        <div class="table-header">
+                            <h3>Spring 2024 Grades</h3>
+                            <div>
+                                <button class="btn btn-light btn-sm me-2"><i class="fas fa-download"></i> Export</button>
+                                <button class="btn btn-primary btn-sm"><i class="fas fa-print"></i> Print</button>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Course Code</th>
+                                        <th>Course Title</th>
+                                        <th>Instructor</th>
+                                        <th>Credits</th>
+                                        <th>Midterm</th>
+                                        <th>Assignments</th>
+                                        <th>Final Exam</th>
+                                        <th>Total</th>
+                                        <th>Grade</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>CSC301</td>
+                                        <td>Database Systems</td>
+                                        <td>Dr. Jane Smith</td>
+                                        <td>3</td>
+                                        <td>85/100</td>
+                                        <td>92/100</td>
+                                        <td>-</td>
+                                        <td>88.5</td>
+                                        <td><span class="grade-badge">B+</span></td>
+                                        <td><span class="status-badge status-active">In Progress</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MAT202</td>
+                                        <td>Calculus II</td>
+                                        <td>Prof. John Davis</td>
+                                        <td>4</td>
+                                        <td>88/100</td>
+                                        <td>85/100</td>
+                                        <td>-</td>
+                                        <td>86.5</td>
+                                        <td><span class="grade-badge">B</span></td>
+                                        <td><span class="status-badge status-active">In Progress</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ENG201</td>
+                                        <td>Technical Writing</td>
+                                        <td>Dr. Mary Johnson</td>
+                                        <td>3</td>
+                                        <td>92/100</td>
+                                        <td>95/100</td>
+                                        <td>-</td>
+                                        <td>93.5</td>
+                                        <td><span class="grade-badge">A</span></td>
+                                        <td><span class="status-badge status-active">In Progress</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PHY102</td>
+                                        <td>Physics II</td>
+                                        <td>Prof. Robert Brown</td>
+                                        <td>4</td>
+                                        <td>78/100</td>
+                                        <td>82/100</td>
+                                        <td>-</td>
+                                        <td>80.0</td>
+                                        <td><span class="grade-badge">B-</span></td>
+                                        <td><span class="status-badge status-active">In Progress</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ITC201</td>
+                                        <td>Networking Fundamentals</td>
+                                        <td>Dr. Sarah Williams</td>
+                                        <td>3</td>
+                                        <td>90/100</td>
+                                        <td>88/100</td>
+                                        <td>-</td>
+                                        <td>89.0</td>
+                                        <td><span class="grade-badge">B+</span></td>
+                                        <td><span class="status-badge status-active">In Progress</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Grades -->
+                    <div class="dashboard-table">
+                        <div class="table-header">
+                            <h3>Detailed Grade Breakdown</h3>
+                            <button class="btn btn-light btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#gradeDetails">
+                                <i class="fas fa-chevron-down"></i> Show Details
+                            </button>
+                        </div>
+                        <div class="collapse show" id="gradeDetails">
+                            <div class="p-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="course-grade-details mb-4">
+                                            <h5>CSC301 - Database Systems</h5>
+                                            <div class="grade-breakdown">
+                                                <div class="grade-item">
+                                                    <span>Assignment 1: Database Design</span>
+                                                    <span class="grade-value">95/100 (A)</span>
+                                                </div>
+                                                <div class="grade-item">
+                                                    <span>Assignment 2: SQL Queries</span>
+                                                    <span class="grade-value">90/100 (A-)</span>
+                                                </div>
+                                                <div class="grade-item">
+                                                    <span>Midterm Exam</span>
+                                                    <span class="grade-value">85/100 (B+)</span>
+                                                </div>
+                                                <div class="grade-item">
+                                                    <span>Project: Implementation</span>
+                                                    <span class="grade-value">-</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="course-grade-details mb-4">
+                                            <h5>MAT202 - Calculus II</h5>
+                                            <div class="grade-breakdown">
+                                                <div class="grade-item">
+                                                    <span>Quiz 1: Integration</span>
+                                                    <span class="grade-value">85/100 (B)</span>
+                                                </div>
+                                                <div class="grade-item">
+                                                    <span>Assignment 2: Series</span>
+                                                    <span class="grade-value">90/100 (A-)</span>
+                                                </div>
+                                                <div class="grade-item">
+                                                    <span>Midterm Exam</span>
+                                                    <span class="grade-value">88/100 (B+)</span>
+                                                </div>
+                                                <div class="grade-item">
+                                                    <span>Quiz 3: Applications</span>
+                                                    <span class="grade-value">82/100 (B-)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Previous Semesters -->
+                <div class="tab-pane fade" id="previous" role="tabpanel">
+                    <div class="dashboard-table mb-4">
+                        <div class="table-header">
+                            <h3>Academic History</h3>
+                            <div class="btn-group">
+                                <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    Select Semester
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Fall 2023</a></li>
+                                    <li><a class="dropdown-item" href="#">Spring 2023</a></li>
+                                    <li><a class="dropdown-item" href="#">Fall 2022</a></li>
+                                    <li><a class="dropdown-item" href="#">Spring 2022</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Semester</th>
+                                        <th>Course Code</th>
+                                        <th>Course Title</th>
+                                        <th>Credits</th>
+                                        <th>Grade</th>
+                                        <th>Grade Points</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="5" class="align-middle">Fall 2023</td>
+                                        <td>CSC201</td>
+                                        <td>Programming Fundamentals</td>
+                                        <td>3</td>
+                                        <td><span class="grade-badge">A</span></td>
+                                        <td>12.0</td>
+                                        <td><span class="status-badge status-active">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MAT101</td>
+                                        <td>Calculus I</td>
+                                        <td>4</td>
+                                        <td><span class="grade-badge">B+</span></td>
+                                        <td>13.2</td>
+                                        <td><span class="status-badge status-active">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ENG101</td>
+                                        <td>English Composition</td>
+                                        <td>3</td>
+                                        <td><span class="grade-badge">A-</span></td>
+                                        <td>11.1</td>
+                                        <td><span class="status-badge status-active">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>GEN101</td>
+                                        <td>General Studies</td>
+                                        <td>2</td>
+                                        <td><span class="grade-badge">A</span></td>
+                                        <td>8.0</td>
+                                        <td><span class="status-badge status-active">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><strong>Semester GPA:</strong></td>
+                                        <td><strong>3.50</strong></td>
+                                        <td colspan="3"><strong>Credits: 12 | Quality Points: 44.3</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- GPA Trend Chart -->
+                    <div class="dashboard-table">
+                        <div class="table-header">
+                            <h3>GPA Trend</h3>
+                        </div>
+                        <div class="p-4">
+                            <div class="gpa-trend">
+                                <div class="trend-item">
+                                    <div class="trend-semester">Spring 2022</div>
+                                    <div class="trend-bar">
+                                        <div class="trend-fill" style="width: 90%"></div>
+                                    </div>
+                                    <div class="trend-value">3.60</div>
+                                </div>
+                                <div class="trend-item">
+                                    <div class="trend-semester">Fall 2022</div>
+                                    <div class="trend-bar">
+                                        <div class="trend-fill" style="width: 83%"></div>
+                                    </div>
+                                    <div class="trend-value">3.30</div>
+                                </div>
+                                <div class="trend-item">
+                                    <div class="trend-semester">Spring 2023</div>
+                                    <div class="trend-bar">
+                                        <div class="trend-fill" style="width: 85%"></div>
+                                    </div>
+                                    <div class="trend-value">3.40</div>
+                                </div>
+                                <div class="trend-item">
+                                    <div class="trend-semester">Fall 2023</div>
+                                    <div class="trend-bar">
+                                        <div class="trend-fill" style="width: 88%"></div>
+                                    </div>
+                                    <div class="trend-value">3.50</div>
+                                </div>
+                                <div class="trend-item current">
+                                    <div class="trend-semester">Spring 2024</div>
+                                    <div class="trend-bar">
+                                        <div class="trend-fill" style="width: 86%"></div>
+                                    </div>
+                                    <div class="trend-value">3.45</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unofficial Transcript -->
+                <div class="tab-pane fade" id="unofficial" role="tabpanel">
+                    <div class="dashboard-table">
+                        <div class="table-header">
+                            <h3>Unofficial Transcript</h3>
+                            <div>
+                                <button class="btn btn-light btn-sm me-2"><i class="fas fa-download"></i> Download PDF</button>
+                                <button class="btn btn-primary btn-sm"><i class="fas fa-print"></i> Print Transcript</button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="transcript-header text-center mb-4">
+                                <h4>Grand Gedeh University</h4>
+                                <h5>Unofficial Transcript</h5>
+                                <p>Student: John Student | ID: GGU2023001</p>
+                                <p>Program: Bachelor of Science in Information Technology</p>
+                            </div>
+                            
+                            <div class="transcript-summary mb-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="summary-item">
+                                            <strong>Cumulative GPA:</strong> 3.52
+                                        </div>
+                                        <div class="summary-item">
+                                            <strong>Credits Attempted:</strong> 90
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="summary-item">
+                                            <strong>Credits Earned:</strong> 90
+                                        </div>
+                                        <div class="summary-item">
+                                            <strong>Academic Standing:</strong> Good Standing
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="transcript-semester mb-4">
+                                <h6>Spring 2022</h6>
+                                <table class="table table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Course</th>
+                                            <th>Title</th>
+                                            <th>Credits</th>
+                                            <th>Grade</th>
+                                            <th>Points</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>IT101</td>
+                                            <td>Intro to IT</td>
+                                            <td>3</td>
+                                            <td>A</td>
+                                            <td>12.0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>MAT100</td>
+                                            <td>College Algebra</td>
+                                            <td>3</td>
+                                            <td>A-</td>
+                                            <td>11.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ENG100</td>
+                                            <td>English I</td>
+                                            <td>3</td>
+                                            <td>B+</td>
+                                            <td>9.9</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><strong>Semester Total</strong></td>
+                                            <td><strong>9</strong></td>
+                                            <td><strong>GPA: 3.60</strong></td>
+                                            <td><strong>33.0</strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle"></i> This is an unofficial transcript. For official transcripts, please contact the Registrar's Office.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grade Legend -->
+            <div class="dashboard-table mt-4">
+                <div class="table-header">
+                    <h3>Grading System</h3>
+                </div>
+                <div class="p-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Grade</th>
+                                        <th>Points</th>
+                                        <th>Percentage</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="grade-badge">A</span></td>
+                                        <td>4.0</td>
+                                        <td>93-100%</td>
+                                        <td>Excellent</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="grade-badge">A-</span></td>
+                                        <td>3.7</td>
+                                        <td>90-92%</td>
+                                        <td>Very Good</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="grade-badge">B+</span></td>
+                                        <td>3.3</td>
+                                        <td>87-89%</td>
+                                        <td>Good</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="grade-badge">B</span></td>
+                                        <td>3.0</td>
+                                        <td>83-86%</td>
+                                        <td>Above Average</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Grade</th>
+                                        <th>Points</th>
+                                        <th>Percentage</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="grade-badge">B-</span></td>
+                                        <td>2.7</td>
+                                        <td>80-82%</td>
+                                        <td>Average</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="grade-badge">C+</span></td>
+                                        <td>2.3</td>
+                                        <td>77-79%</td>
+                                        <td>Satisfactory</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="grade-badge">C</span></td>
+                                        <td>2.0</td>
+                                        <td>73-76%</td>
+                                        <td>Passing</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="grade-badge">F</span></td>
+                                        <td>0.0</td>
+                                        <td>Below 73%</td>
+                                        <td>Fail</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/dashboard.js"></script>
+    <script src="/js/layout.js"></script>
+</body>
+</html>

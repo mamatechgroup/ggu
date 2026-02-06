@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Gedeh University - Alumni</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+</head>
+<body>
+    <!-- HEADER -->
+    <div id="site-header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>GGU Alumni Network</h2>
+            <p>Connecting over 5,000 successful graduates worldwide. Our alumni are making significant contributions across various sectors, creating positive change in Liberia and beyond.</p>
+            <a href="#alumni-registration" class="cta-button">Join Alumni Network</a>
+        </div>
+    </section>
+
+    <!-- Why GG University Section -->
+    <section class="why-ggu-section">
+        <div class="container">
+            <h2 class="section-title text-center text-white mb-5" style="white-space: nowrap;">Why Choose Grand Gedeh University?</h2>
+            <div class="why-ggu-slider">
+                <button class="slider-nav prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="cards-container" id="cardsContainer">
+                    <!-- Cards will be populated by JavaScript -->
+                </div>
+                <button class="slider-nav next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="slider-dots" id="sliderDots">
+                    <!-- Dots will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alumni Slide Card Section -->
+    <section class="alumni-slide-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Distinguished Alumni</h2>
+            <div class="alumni-slider">
+                <button class="slider-nav prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="alumni-cards-container" id="alumniCardsContainer">
+                    <!-- Alumni cards will be populated by JavaScript -->
+                </div>
+                <button class="slider-nav next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="slider-dots" id="alumniSliderDots">
+                    <!-- Dots will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Alumni Quick Access</h2>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 class="card-title">Alumni Network</h3>
+                        <p>Connect with fellow graduates and expand your professional network</p>
+                        <a href="#network" class="btn btn-primary">Join Network</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="card-title">Career Services</h3>
+                        <p>Job opportunities, career counseling, and professional development</p>
+                        <a href="#careers" class="btn btn-primary">Explore Careers</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="card-title">Mentorship Program</h3>
+                        <p>Guide current students or mentor recent graduates</p>
+                        <a href="#mentorship" class="btn btn-primary">Become a Mentor</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="card-title">Give Back</h3>
+                        <p>Support GGU through donations, scholarships, or volunteering</p>
+                        <a href="#give-back" class="btn btn-primary">Make a Difference</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alumni Success Stories -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Alumni Success Stories</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="alumni-story-card">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" 
+                                     alt="Dr. Emmanuel Toe" class="alumni-story-img">
+                            </div>
+                            <div class="col-md-8">
+                                <h3>Dr. Emmanuel Toe</h3>
+                                <p class="alumni-degree">MD, Class of 2010</p>
+                                <p class="alumni-position">Chief Medical Officer, John F. Kennedy Medical Center</p>
+                                <p>"GGU's medical program provided me with both the knowledge and compassion needed to serve my community. The hands-on training in rural health clinics was invaluable."</p>
+                                <a href="#" class="read-more">Read Full Story →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="alumni-story-card">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" 
+                                     alt="Sarah Johnson" class="alumni-story-img">
+                            </div>
+                            <div class="col-md-8">
+                                <h3>Sarah Johnson</h3>
+                                <p class="alumni-degree">MBA, Class of 2015</p>
+                                <p class="alumni-position">CEO, Tech Solutions Africa</p>
+                                <p>"The entrepreneurship courses at GGU gave me the confidence to start my own company. The alumni network helped me secure my first major client."</p>
+                                <a href="#" class="read-more">Read Full Story →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="alumni-story-card">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" 
+                                     alt="James Kollie" class="alumni-story-img">
+                            </div>
+                            <div class="col-md-8">
+                                <h3>James Kollie</h3>
+                                <p class="alumni-degree">Computer Engineering, Class of 2018</p>
+                                <p class="alumni-position">Senior Software Engineer, Google</p>
+                                <p>"The rigorous computer science program at GGU prepared me for challenges at top tech companies. I still collaborate with my professors on research projects."</p>
+                                <a href="#" class="read-more">Read Full Story →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="alumni-story-card">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" 
+                                     alt="Grace Sherman" class="alumni-story-img">
+                            </div>
+                            <div class="col-md-8">
+                                <h3>Grace Sherman</h3>
+                                <p class="alumni-degree">Law, Class of 2012</p>
+                                <p class="alumni-position">Attorney General of Liberia</p>
+                                <p>"GGU's focus on ethics and social justice shaped my legal career. I'm proud to serve my country with integrity learned at GGU."</p>
+                                <a href="#" class="read-more">Read Full Story →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alumni Benefits -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Alumni Benefits & Services</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="benefit-card text-center">
+                        <div class="benefit-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Library Access</h3>
+                        <p>Continue your research with lifetime access to our digital library resources and databases.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="benefit-card text-center">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Career Advancement</h3>
+                        <p>Exclusive job board, career counseling, and professional development workshops.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="benefit-card text-center">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Networking Events</h3>
+                        <p>Annual reunions, regional chapters, and industry-specific networking opportunities.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="benefit-card text-center">
+                        <div class="benefit-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Continuing Education</h3>
+                        <p>Discounts on graduate programs and professional certification courses.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="benefit-card text-center">
+                        <div class="benefit-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Mentorship Programs</h3>
+                        <p>Connect with students or recent graduates to share your professional experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="benefit-card text-center">
+                        <div class="benefit-icon">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                        <h3>Campus Privileges</h3>
+                        <p>Access to sports facilities, cultural events, and guest lectures on campus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alumni Registration -->
+    <section id="alumni-registration" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Join the GGU Alumni Network</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="registration-form">
+                        <form id="alumniRegistrationForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="fullName" class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" id="fullName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="graduationYear" class="form-label">Graduation Year *</label>
+                                    <select class="form-control" id="graduationYear" required>
+                                        <option value="">Select Year</option>
+                                        <!-- Years will be populated by JavaScript -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="degree" class="form-label">Degree Earned *</label>
+                                    <input type="text" class="form-control" id="degree" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="major" class="form-label">Major/Program *</label>
+                                    <input type="text" class="form-control" id="major" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="currentJob" class="form-label">Current Position</label>
+                                    <input type="text" class="form-control" id="currentJob">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="company" class="form-label">Company/Organization</label>
+                                    <input type="text" class="form-control" id="company">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="interests" class="form-label">Areas of Interest (select all that apply)</label>
+                                <div class="interests-container">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="mentoring" value="mentoring">
+                                        <label class="form-check-label" for="mentoring">Student Mentoring</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="networking" value="networking">
+                                        <label class="form-check-label" for="networking">Networking Events</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="donations" value="donations">
+                                        <label class="form-check-label" for="donations">Donations/Scholarships</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="careerTalks" value="careerTalks">
+                                        <label class="form-check-label" for="careerTalks">Career Talks</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="research" value="research">
+                                        <label class="form-check-label" for="research">Research Collaboration</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Additional Comments</label>
+                                <textarea class="form-control" id="message" rows="3"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Join Alumni Network</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alumni Statistics -->
+    <section class="alumni-statistics">
+        <div class="container">
+            <h2 class="section-title text-center text-white mb-5">GGU Alumni by the Numbers</h2>
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item">
+                        <h3 class="stat-number">5,000+</h3>
+                        <p class="stat-label">Alumni Worldwide</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item">
+                        <h3 class="stat-number">42</h3>
+                        <p class="stat-label">Countries Represented</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item">
+                        <h3 class="stat-number">85%</h3>
+                        <p class="stat-label">Employed within 6 Months</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item">
+                        <h3 class="stat-number">$2.5M</h3>
+                        <p class="stat-label">Scholarships Funded</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Alumni Testimonials</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="testimonial-card">
+                        <h3 class="text-center mb-4" style="color: #228B22;">Recent Graduates</h3>
+                        <div class="testimonial-slider">
+                            <div class="testimonial-slide active">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Mark Johnson" class="testimonial-image">
+                                <div class="testimonial-text">
+                                    "GGU prepared me exceptionally well for my career in software engineering. The practical projects and industry connections gave me a competitive edge."
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="testimonial-name">Mark Johnson</h4>
+                                    <p class="testimonial-role">Software Engineer, Microsoft<br>Class of 2021</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Grace Mensah" class="testimonial-image">
+                                <div class="testimonial-text">
+                                    "The research opportunities at GGU opened doors for my PhD. The mentorship from faculty continues to guide my academic career."
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="testimonial-name">Grace Mensah</h4>
+                                    <p class="testimonial-role">PhD Candidate, Stanford<br>Class of 2020</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-controls">
+                            <div class="slider-dot active" data-slider="recent" data-index="0"></div>
+                            <div class="slider-dot" data-slider="recent" data-index="1"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="testimonial-card">
+                        <h3 class="text-center mb-4" style="color: #228B22;">Established Alumni</h3>
+                        <div class="testimonial-slider">
+                            <div class="testimonial-slide active">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Dr. Samuel Koffa" class="testimonial-image">
+                                <div class="testimonial-text">
+                                    "My GGU education was the foundation of my 30-year career in public health. I'm proud to give back by mentoring current students."
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="testimonial-name">Dr. Samuel Koffa</h4>
+                                    <p class="testimonial-role">Director, Ministry of Health<br>Class of 1992</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Angela Roberts" class="testimonial-image">
+                                <div class="testimonial-text">
+                                    "GGU's business program taught me both theory and practical skills. The alumni network has been invaluable throughout my entrepreneurial journey."
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="testimonial-name">Angela Roberts</h4>
+                                    <p class="testimonial-role">Founder, Green Energy Solutions<br>Class of 2005</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-controls">
+                            <div class="slider-dot active" data-slider="established" data-index="0"></div>
+                            <div class="slider-dot" data-slider="established" data-index="1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Enquiry Form (Fixed on Right Side) -->
+    <div class="enquiry-form-container">
+        <div class="enquiry-form-wrapper">
+            <button class="enquiry-toggle" id="enquiryToggle">
+                <i class="fas fa-graduation-cap"></i>
+                Admissions Enquiry
+            </button>
+            <div class="enquiry-form" id="enquiryForm">
+                <div class="enquiry-header">
+                    <h3>Admissions Enquiry</h3>
+                    <button class="close-btn" id="closeForm">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <form id="admissionForm">
+                    <!-- Form content same as homepage -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <div id="site-footer"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/layout.js"></script>
+    <script src="/js/alumni.js"></script>
+</body>
+</html>

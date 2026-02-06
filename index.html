@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Gedeh University - Home</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- HEADER -->
+    <div id="site-header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Welcome to Grand Gedeh University</h2>
+            <p>A premier institution of higher learning committed to academic excellence, innovation, and community development. We nurture leaders who will shape the future of Liberia and beyond.</p>
+            <a href="admissions.html" class="cta-button">Apply Now for 2026</a>
+        </div>
+    </section>
+
+    <!-- Why GG University Section -->
+    <section class="why-ggu-section">
+        <div class="container">
+            <h2 class="section-title text-center text-white mb-5">Why Choose Grand Gedeh University?</h2>
+            <div class="why-ggu-slider">
+                <button class="slider-nav prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="cards-container" id="cardsContainer">
+                    <!-- Cards will be populated by JavaScript -->
+                </div>
+                <button class="slider-nav next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="slider-dots" id="sliderDots">
+                    <!-- Dots will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Quick Access</h2>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="card-title">Academics</h3>
+                        <p>Explore our colleges, departments, and academic programs</p>
+                        <a href="colleges.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h3 class="card-title">Admissions</h3>
+                        <p>Apply for undergraduate and graduate programs</p>
+                        <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h3 class="card-title">News & Events</h3>
+                        <p>Latest university announcements and campus events</p>
+                        <a href="news.html" class="btn btn-primary">View News</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-icon">
+                            <i class="fas fa-life-ring"></i>
+                        </div>
+                        <h3 class="card-title">Student Portal</h3>
+                        <p>Access grades, courses, and academic resources</p>
+                        <a href="login.html" class="btn btn-primary">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">Campus Life Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-slider">
+                    <div class="gallery-slide">
+                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" alt="GGU Campus">
+                        <div class="gallery-caption">
+                            <h4>Beautiful GGU Campus</h4>
+                            <p>Modern facilities in a serene learning environment</p>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="assets/images/classroom.jpg" alt="Classroom">
+                        <div class="gallery-caption">
+                            <h4>State-of-the-Art Classrooms</h4>
+                            <p>Interactive learning spaces with modern technology</p>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="assets/images/library.jpg" alt="Library">
+                        <div class="gallery-caption">
+                            <h4>Digital Library</h4>
+                            <p>Extensive collection of books and digital resources</p>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="assets/images/laboratory.jpg" alt="Laboratory">
+                        <div class="gallery-caption">
+                            <h4>Research Laboratories</h4>
+                            <p>Advanced equipment for scientific research</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="gallery-nav gallery-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="gallery-nav gallery-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outstanding Students Section -->
+    <section class="outstanding-students">
+        <div class="container">
+            <h2 class="section-title text-center text-white mb-4">Outstanding Students of the Month</h2>
+            <div class="student-slider">
+                <div class="student-slide active">
+                    <img src="/assets/images/favicon.ico" alt="Mama TechGroup" class="student-image">
+                    <h3 class="student-name">Mama TechGroup</h3>
+                    <p class="student-achievement">Computer Science • GPA: 4.0</p>
+                    <p class="student-quote">"GGU has provided me with the perfect platform to combine theoretical knowledge with practical applications. The faculty's dedication to student success is truly inspiring."</p>
+                </div>
+                <div class="student-slide">
+                    <img src="/assets/images/favicon.ico" alt="Mama TechGroup" class="student-image">
+                    <h3 class="student-name">Mama TechGroup</h3>
+                    <p class="student-achievement">Medicine • Research Excellence Award</p>
+                    <p class="student-quote">"The research opportunities at GGU are exceptional. My work on tropical diseases has been supported by world-class facilities and mentorship."</p>
+                </div>
+                <div class="student-slide">
+                    <img src="/assets/images/favicon.ico" alt="Mama TechGroup" class="student-image">
+                    <h3 class="student-name">Mama TechGroup</h3>
+                    <p class="student-achievement">Engineering • International Robotics Competition Winner</p>
+                    <p class="student-quote">"GGU's hands-on approach to engineering education prepared me to compete and win at international levels. The support system here is incredible."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="updates-section">
+        <div class="updates-container">
+
+           <!-- NEWS -->
+            <div class="updates-column">
+                <h3>News</h3>
+
+                <div class="item">
+                    <div class="date-box">
+                        <span class="day">25</span>
+                        <span class="month">JUL</span>
+                    </div>
+                    <p>Grand Gedeh University Officially Established | National Legislature Grants Full University Status</p>
+                </div>
+
+                <div class="item">
+                    <div class="date-box">
+                        <span class="day">20</span>
+                        <span class="month">JAN</span>
+                    </div>
+                    <p>Dr. Eric ZM Gbotoe Appointed as President of Grand Gedeh University</p>
+                </div>
+
+                <div class="item">
+                    <div class="date-box">
+                        <span class="day">15</span>
+                        <span class="month">DEC</span>
+                    </div>
+                    <p>GGU Celebrates 7th Graduation Convocation | 591 Graduates Empowered for Liberia's Development</p>
+                </div>
+
+                <a href="#" class="view-link">– VIEW MORE</a>
+            </div>
+
+            <!-- EVENTS -->
+            <div class="updates-column">
+                <h3>Events</h3>
+
+                <div class="item">
+                    <div class="date-box">
+                        <span class="day">20</span>
+                        <span class="month">JAN</span>
+                    </div>
+                    <p>Grand Gedeh University Launches Bachelor Degree Programs | Expanding Educational Opportunities</p>
+                </div>
+
+                <div class="item">
+                    <div class="date-box">
+                        <span class="day">15</span>
+                        <span class="month">FEB</span>
+                    </div>
+                    <p>Community Engagement Symposium: Driving Sustainable Development in Southeastern Liberia</p>
+                </div>
+
+                <div class="item">
+                    <div class="date-box">
+                        <span class="day">10</span>
+                        <span class="month">MAR</span>
+                    </div>
+                    <p>Research Innovation Forum: Addressing Liberia's Pressing Challenges Through Academic Excellence</p>
+                </div>
+
+                <a href="#" class="view-link">– VIEW MORE</a>
+            </div>
+
+            <!-- CIRCULARS -->
+            <div class="updates-column">
+                <h3>Circulars</h3>
+
+                <div class="circular-slider">
+                    <div class="text-item red circular-slide active">
+                        "List of Awardees for Convocation, January-2025"
+                        <div class="date">30-DEC-2024</div>
+                    </div>
+
+                    <div class="text-item red circular-slide">
+                        "Academic Council Meeting Notification"
+                        <div class="date">05-JAN-2025</div>
+                    </div>
+
+                    <div class="text-item red circular-slide">
+                        "Holiday Notice – Republic Day"
+                        <div class="date">26-JAN-2025</div>
+                    </div>
+                </div>
+
+                <a href="#" class="view-link">– VIEW ALL</a>
+
+                <h4>Examination Circulars</h4>
+
+                <div class="exam-slider">
+                    <div class="text-item red exam-slide active">
+                        "University Theory Examinations – Schedule Notification for B.Sc. Nursing Students"
+                        <div class="date">08-MAY-2025</div>
+                    </div>
+
+                    <div class="text-item red exam-slide">
+                        "Admit Card Release Notification – UG & PG"
+                        <div class="date">15-MAY-2025</div>
+                    </div>
+
+                    <div class="text-item red exam-slide">
+                        "Practical Examination Guidelines"
+                        <div class="date">20-MAY-2025</div>
+                    </div>
+                </div>
+
+                <a href="#" class="view-link">– VIEW ALL</a>
+            </div>
+
+            <div class="announcement-box">
+                <img src="/assets/images/slide1.jpg" data-slide="0" class="announcement-slide active">
+                <img src="/assets/images/slide2.jpg" data-slide="1" class="announcement-slide">
+                <img src="/assets/images/slide3.avif" data-slide="2" class="announcement-slide">
+            </div>
+
+            <div class="dots">
+                <span class="dot active" data-dot="0"></span>
+                <span class="dot" data-dot="1"></span>
+                <span class="dot" data-dot="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">What People Say About GGU</h2>
+            <div class="row">
+                <!-- Student Speaks -->
+                <div class="col-lg-6 mb-4">
+                    <div class="testimonial-card">
+                        <h3 class="text-center mb-4" style="color: #228B22;">Student Speaks</h3>
+                        <div class="testimonial-slider">
+                            <div class="testimonial-slide active">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="John Doe" class="testimonial-image">
+                                <div class="testimonial-text">
+                                    The quality of education and the support from faculty at GGU is exceptional. The hands-on approach to learning has prepared me well for my career.
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="testimonial-name">John Doe</h4>
+                                    <p class="testimonial-role">Computer Science, Class of 2024</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Jane Smith" class="testimonial-image">
+                                <div class="testimonial-text">
+                                    GGU provided me with opportunities I never thought possible. The research facilities and international collaborations are outstanding.
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="testimonial-name">Jane Smith</h4>
+                                    <p class="testimonial-role">Medical Science, Class of 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-controls">
+                            <div class="slider-dot active" data-slider="student" data-index="0"></div>
+                            <div class="slider-dot" data-slider="student" data-index="1"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Alumni Speaks -->
+                <div class="col-lg-6 mb-4">
+                    <div class="testimonial-card">
+                        <h3 class="text-center mb-4" style="color: #228B22;">Alumni Speaks</h3>
+                        <div class="testimonial-slider">
+                            <div class="testimonial-slide active">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Robert Johnson" class="testimonial-image">
+                                <div class="testimonial-text">
+                                    My GGU education was the foundation of my successful career in international development. The critical thinking skills I developed here are invaluable.
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="testimonial-name">Robert Johnson</h4>
+                                    <p class="testimonial-role">UN Development Program Director<br>Class of 2005</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Sarah Williams" class="testimonial-image">
+                                <div class="testimonial-text">
+                                    GGU not only gave me academic knowledge but also shaped me as a leader. The alumni network continues to support my professional growth.
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="testimonial-name">Sarah Williams</h4>
+                                    <p class="testimonial-role">CEO, Tech Solutions Africa<br>Class of 2010</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-controls">
+                            <div class="slider-dot active" data-slider="alumni" data-index="0"></div>
+                            <div class="slider-dot" data-slider="alumni" data-index="1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured News -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Latest News & Announcements</h2>
+            <div class="row" id="newsContainer">
+                <!-- News will be loaded dynamically -->
+            </div>
+            <div class="text-center mt-4">
+                <a href="news.html" class="btn btn-secondary">View All News</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">GGU at a Glance</h2>
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item">
+                        <h3 class="stat-number">1,500+</h3>
+                        <p class="stat-label">Students</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item">
+                        <h3 class="stat-number">85+</h3>
+                        <p class="stat-label">Academic Programs</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item">
+                        <h3 class="stat-number">120+</h3>
+                        <p class="stat-label">Faculty Members</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item">
+                        <h3 class="stat-number">6</h3>
+                        <p class="stat-label">Colleges</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnering Universities & Organizations -->
+    <section class="partners-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">Our Partners & Collaborators</h2>
+            <p class="text-center mb-5">Grand Gedeh University collaborates with leading institutions worldwide to enhance educational excellence and research innovation.</p>
+            <div class="partner-logos">
+                <div class="partner-item">
+                    <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="University of Liberia" class="partner-logo">
+                    <div class="partner-name">University of Liberia</div>
+                </div>
+                <div class="partner-item">
+                    <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Harvard University" class="partner-logo">
+                    <div class="partner-name">Harvard University</div>
+                </div>
+                <div class="partner-item">
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="UNDP" class="partner-logo">
+                    <div class="partner-name">UNDP Liberia</div>
+                </div>
+                <div class="partner-item">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="World Bank" class="partner-logo">
+                    <div class="partner-name">World Bank</div>
+                </div>
+                <div class="partner-item">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="UNESCO" class="partner-logo">
+                    <div class="partner-name">UNESCO</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Enquiry Form (Fixed on Right Side) -->
+    <div class="enquiry-form-container">
+        <div class="enquiry-form-wrapper">
+            <button class="enquiry-toggle" id="enquiryToggle">
+                <i class="fas fa-graduation-cap"></i>
+                Admissions Enquiry
+            </button>
+            <div class="enquiry-form" id="enquiryForm">
+                 <div class="enquiry-header">
+                    <h3>Admissions Enquiry</h3>
+                    <button class="close-btn" id="closeForm">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <form id="admissionForm">
+                    <!-- Name and Email side by side -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Enter Name *</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Enter Email Address *</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Number and State side by side -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="mobile">Enter Mobile Number *</label>
+                            <input type="tel" id="mobile" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="state">Select State *</label>
+                            <select id="state" class="form-control" required>
+                                <option value="">Select State</option>
+                                <option value="grand-gedeh">Grand Gedeh</option>
+                                <option value="montserrado">Montserrado</option>
+                                <option value="nimba">Nimba</option>
+                                <option value="bong">Bong</option>
+                                <option value="lofa">Lofa</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- City and Program side by side -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">Select City *</label>
+                            <select id="city" class="form-control" required>
+                                <option value="">Select City</option>
+                                <option value="zwedru">Zwedru</option>
+                                <option value="monrovia">Monrovia</option>
+                                <option value="ganta">Ganta</option>
+                                <option value="gbarnga">Gbarnga</option>
+                                <option value="voinjama">Voinjama</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="program">Select Program *</label>
+                            <select id="program" class="form-control" required>
+                                <option value="">Select Program</option>
+                                <option value="undergraduate">Undergraduate</option>
+                                <option value="graduate">Graduate</option>
+                                <option value="phd">PhD</option>
+                                <option value="diploma">Diploma</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Course field (full width) -->
+                    <div class="form-group">
+                        <label for="course">Select Course *</label>
+                        <select id="course" class="form-control" required>
+                            <option value="">Select Course</option>
+                            <option value="computer-science">Computer Science</option>
+                            <option value="medicine">Medicine</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="business">Business Administration</option>
+                            <option value="law">Law</option>
+                            <option value="education">Education</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Enter Captcha *</label>
+                        <div class="captcha-wrapper">
+                            <div class="captcha-input-group">
+                                <input type="text" id="captchaInput" class="form-control" placeholder="Enter captcha" required>
+                                <div class="captcha-display-group">
+                                    <div class="captcha-box" id="captchaDisplay">G G U 2 4</div>
+                                    <button type="button" class="refresh-btn" id="refreshCaptcha">
+                                        <i class="fas fa-redo"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="consent" required>
+                        <label for="consent">
+                            "I authorise GG University, Zwedru and its representatives to Call, SMS, Email or WhatsApp me about its programmes and offers. This consent overrides any registration for DNC/NDNC."
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        Submit Enquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+   <!-- FOOTER SECTION -->
+    <div id="site-footer"></div>
+    
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Chart.js for Dashboard -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/layout.js"></script>
+</body>
+</html>
