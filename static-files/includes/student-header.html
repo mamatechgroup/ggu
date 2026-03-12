@@ -1,0 +1,32 @@
+<header class="ggu-header">
+    <div class="container">
+        <!-- Wrapper for toggle, logo, and auth (horizontal on all screens) -->
+        <div class="admin-header-top">
+            <button class="sidebar-toggle" aria-label="Toggle sidebar">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo-section">
+                <img src="/assets/logo/ggu-logo.svg" alt="GGU Logo" class="ggu-logo" onerror="this.src='https://via.placeholder.com/60x60/228B22/FFFFFF?text=GGU'">
+                <div class="ggu-title">
+                    <h1>Grand Gedeh University</h1>
+                    <p>Student Portal</p>
+                </div>
+            </div>
+            <div class="auth-section">
+                <div class="user-menu">
+                    <span class="user-name me-2"></span>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/index.html"><i class="fas fa-home"></i> Main Website</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#" id="logoutBtn" onclick="logoutUser()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Management - Grand Gedeh University</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+   
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+ 
+
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+</head>
+<body class="dashboard-container">
+    <!-- Header -->
+    <div id="admin-header"></div>
+    <div class="sidebar-overlay"></div>
+    
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <div id="admin-sidebar"></div>
+
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <div>
+                    <h1>Course Management</h1>
+                    <p class="text-muted mb-0">Manage courses, course catalog, and course assignments</p>
+                </div>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        AU
+                    </div>
+                    <div>
+                        <h5 class="user-fullname mb-0">Admin User</h5>
+                        <p class="user-role mb-0">System Administrator</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Add Course
+                        </button>
+                        <button class="btn btn-outline-primary">
+                            <i class="fas fa-file-import"></i> Import Courses
+                        </button>
+                        <button class="btn btn-outline-primary">
+                            <i class="fas fa-print"></i> Print Catalog
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search courses...">
+                        <button class="btn btn-outline-secondary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h6>Total Courses</h6>
+                        <div class="stat-number">85</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 10% from last semester
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h6>Active Courses</h6>
+                        <div class="stat-number">75</div>
+                        <div class="stat-change">
+                            This semester
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h6>Departments</h6>
+                        <div class="stat-number">12</div>
+                        <div class="stat-change">
+                            Offering courses
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h6>Enrolled Students</h6>
+                        <div class="stat-number">2,450</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 15% from last semester
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-table mb-4">
+                <div class="table-header">
+                    <h3>Course Catalog</h3>
+                    <div class="header-actions">
+                        <div class="dropdown">
+                            <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-filter"></i> Filter
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">All Courses</a></li>
+                                <li><a class="dropdown-item" href="#">Active Courses</a></li>
+                                <li><a class="dropdown-item" href="#">By Department</a></li>
+                                <li><a class="dropdown-item" href="#">By Level</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-light btn-sm">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Course Code</th>
+                                <th>Course Title</th>
+                                <th>Department</th>
+                                <th>Credits</th>
+                                <th>Instructor</th>
+                                <th>Enrolled</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>CSC101</strong></td>
+                                <td>Introduction to Computer Science</td>
+                                <td>Computer Science</td>
+                                <td>3</td>
+                                <td>Dr. Jane Smith</td>
+                                <td>45</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-outline-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>MAT101</strong></td>
+                                <td>Calculus I</td>
+                                <td>Mathematics</td>
+                                <td>4</td>
+                                <td>Prof. John Davis</td>
+                                <td>60</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-outline-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>ENG101</strong></td>
+                                <td>Composition I</td>
+                                <td>English</td>
+                                <td>3</td>
+                                <td>Dr. Mary Johnson</td>
+                                <td>55</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-outline-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>PHY101</strong></td>
+                                <td>Physics I</td>
+                                <td>Physics</td>
+                                <td>4</td>
+                                <td>Prof. Robert Brown</td>
+                                <td>40</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-outline-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>BUS101</strong></td>
+                                <td>Introduction to Business</td>
+                                <td>Business Administration</td>
+                                <td>3</td>
+                                <td>Prof. Susan Wilson</td>
+                                <td>50</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-outline-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="dashboard-table h-100">
+                        <div class="table-header">
+                            <h3>Add New Course</h3>
+                        </div>
+                        <div class="p-4">
+                            <form id="addCourseForm">
+                                <div class="mb-3">
+                                    <label for="courseCode" class="form-label">Course Code</label>
+                                    <input type="text" class="form-control" id="courseCode" placeholder="e.g., CSC101" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="courseTitle" class="form-label">Course Title</label>
+                                    <input type="text" class="form-control" id="courseTitle" placeholder="e.g., Introduction to Computer Science" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="courseDepartment" class="form-label">Department</label>
+                                    <select class="form-select" id="courseDepartment" required>
+                                        <option value="">Select Department</option>
+                                        <option value="Computer Science">Computer Science</option>
+                                        <option value="Mathematics">Mathematics</option>
+                                        <option value="English">English</option>
+                                        <option value="Physics">Physics</option>
+                                        <option value="Business Administration">Business Administration</option>
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="courseCredits" class="form-label">Credits</label>
+                                        <input type="number" class="form-control" id="courseCredits" min="1" max="6" value="3" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="courseCapacity" class="form-label">Capacity</label>
+                                        <input type="number" class="form-control" id="courseCapacity" min="1" max="100" value="50" required>
+                                    </div>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-plus"></i> Add Course
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="dashboard-table h-100">
+                        <div class="table-header">
+                            <h3>Course Statistics by Department</h3>
+                        </div>
+                        <div class="p-4">
+                            <div class="course-stats">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Computer Science</span>
+                                    <span>15 courses</span>
+                                </div>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-primary" style="width: 18%"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Mathematics</span>
+                                    <span>12 courses</span>
+                                </div>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-success" style="width: 14%"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Engineering</span>
+                                    <span>10 courses</span>
+                                </div>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 12%"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Business</span>
+                                    <span>8 courses</span>
+                                </div>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-warning" style="width: 9%"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Other Departments</span>
+                                    <span>40 courses</span>
+                                </div>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-secondary" style="width: 47%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+     <!-- Custom JS -->
+    <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/dashboard.js"></script>
+    <script src="/js/layout.js"></script>
+</body>
+</html>

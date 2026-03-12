@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Management - Grand Gedeh University</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+</head>
+<body class="dashboard-container">
+    <!-- Header -->
+    <div id="admin-header"></div>
+    <div class="sidebar-overlay"></div>
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <div id="admin-sidebar"></div>
+
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <div>
+                    <h1>Curriculum Management</h1>
+                    <p class="text-muted mb-0">Manage academic programs, degree requirements, and curriculum</p>
+                </div>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        AU
+                    </div>
+                    <div>
+                        <h5 class="user-fullname mb-0">Admin User</h5>
+                        <p class="user-role mb-0">System Administrator</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Add Program
+                        </button>
+                        <button class="btn btn-outline-primary">
+                            <i class="fas fa-edit"></i> Edit Curriculum
+                        </button>
+                        <button class="btn btn-outline-primary">
+                            <i class="fas fa-file-export"></i> Export
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search programs...">
+                        <button class="btn btn-outline-secondary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h6>Total Programs</h6>
+                        <div class="stat-number">25</div>
+                        <div class="stat-change">
+                            Active programs
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h6>Undergraduate</h6>
+                        <div class="stat-number">18</div>
+                        <div class="stat-change">
+                            Bachelor's degrees
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h6>Graduate</h6>
+                        <div class="stat-number">7</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> 2 new programs
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <h6>Certificates</h6>
+                        <div class="stat-number">12</div>
+                        <div class="stat-change">
+                            Professional certificates
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-table mb-4">
+                <div class="table-header">
+                    <h3>Academic Programs</h3>
+                    <div class="header-actions">
+                        <div class="dropdown">
+                            <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-filter"></i> Filter
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">All Programs</a></li>
+                                <li><a class="dropdown-item" href="#">Undergraduate</a></li>
+                                <li><a class="dropdown-item" href="#">Graduate</a></li>
+                                <li><a class="dropdown-item" href="#">By Department</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-light btn-sm">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Program Code</th>
+                                <th>Program Name</th>
+                                <th>Department</th>
+                                <th>Level</th>
+                                <th>Credits</th>
+                                <th>Students</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>CS-BS</strong></td>
+                                <td>Bachelor of Science in Computer Science</td>
+                                <td>Computer Science</td>
+                                <td><span class="badge bg-primary">Undergraduate</span></td>
+                                <td>120</td>
+                                <td>250</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-outline-info">
+                                            <i class="fas fa-book"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>MBA</strong></td>
+                                <td>Master of Business Administration</td>
+                                <td>Business Administration</td>
+                                <td><span class="badge bg-success">Graduate</span></td>
+                                <td>36</td>
+                                <td>85</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-outline-info">
+                                            <i class="fas fa-book"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>EE-BS</strong></td>
+                                <td>Bachelor of Science in Electrical Engineering</td>
+                                <td>Engineering</td>
+                                <td><span class="badge bg-primary">Undergraduate</span></td>
+                                <td>128</td>
+                                <td>180</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-outline-info">
+                                            <i class="fas fa-book"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>MAT-BS</strong></td>
+                                <td>Bachelor of Science in Mathematics</td>
+                                <td>Mathematics</td>
+                                <td><span class="badge bg-primary">Undergraduate</span></td>
+                                <td>120</td>
+                                <td>95</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-outline-info">
+                                            <i class="fas fa-book"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>MS-CS</strong></td>
+                                <td>Master of Science in Computer Science</td>
+                                <td>Computer Science</td>
+                                <td><span class="badge bg-success">Graduate</span></td>
+                                <td>30</td>
+                                <td>45</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn btn-outline-info">
+                                            <i class="fas fa-book"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="dashboard-table h-100">
+                        <div class="table-header">
+                            <h3>Curriculum Requirements</h3>
+                        </div>
+                        <div class="p-4">
+                            <div class="curriculum-details">
+                                <h5>Computer Science (BS) - 120 Credits</h5>
+                                <div class="mt-3">
+                                    <h6>Core Requirements (60 credits)</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check text-success me-2"></i> Programming Fundamentals (12 cr)</li>
+                                        <li><i class="fas fa-check text-success me-2"></i> Data Structures & Algorithms (12 cr)</li>
+                                        <li><i class="fas fa-check text-success me-2"></i> Computer Systems (12 cr)</li>
+                                        <li><i class="fas fa-check text-success me-2"></i> Software Engineering (12 cr)</li>
+                                        <li><i class="fas fa-check text-success me-2"></i> Database Systems (12 cr)</li>
+                                    </ul>
+                                    
+                                    <h6 class="mt-3">Electives (30 credits)</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check text-success me-2"></i> Choose from 15+ elective courses</li>
+                                    </ul>
+                                    
+                                    <h6 class="mt-3">General Education (30 credits)</h6>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check text-success me-2"></i> Mathematics (12 cr)</li>
+                                        <li><i class="fas fa-check text-success me-2"></i> Natural Sciences (8 cr)</li>
+                                        <li><i class="fas fa-check text-success me-2"></i> Humanities (6 cr)</li>
+                                        <li><i class="fas fa-check text-success me-2"></i> Social Sciences (4 cr)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="dashboard-table h-100">
+                        <div class="table-header">
+                            <h3>Curriculum Approval Workflow</h3>
+                        </div>
+                        <div class="p-4">
+                            <div class="workflow-steps">
+                                <div class="step-item mb-3 p-3 border rounded bg-light">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-0">New CS Curriculum Proposal</h6>
+                                            <small class="text-muted">Submitted by: Dr. Jane Smith</small>
+                                        </div>
+                                        <span class="badge bg-warning">Under Review</span>
+                                    </div>
+                                    <div class="mt-2">
+                                        <small>Status: Awaiting department approval</small>
+                                        <div class="mt-2">
+                                            <button class="btn btn-sm btn-outline-primary">Review</button>
+                                            <button class="btn btn-sm btn-outline-success">Approve</button>
+                                            <button class="btn btn-sm btn-outline-danger">Reject</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="step-item mb-3 p-3 border rounded bg-light">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-0">MBA Curriculum Update</h6>
+                                            <small class="text-muted">Submitted by: Prof. Susan Wilson</small>
+                                        </div>
+                                        <span class="badge bg-info">Department Approved</span>
+                                    </div>
+                                    <div class="mt-2">
+                                        <small>Status: Ready for academic committee review</small>
+                                        <div class="mt-2">
+                                            <button class="btn btn-sm btn-outline-primary">Review</button>
+                                            <button class="btn btn-sm btn-outline-success">Approve</button>
+                                            <button class="btn btn-sm btn-outline-danger">Reject</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="step-item p-3 border rounded bg-light">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-0">New Data Science Certificate</h6>
+                                            <small class="text-muted">Submitted by: Dr. Sarah Williams</small>
+                                        </div>
+                                        <span class="badge bg-success">Approved</span>
+                                    </div>
+                                    <div class="mt-2">
+                                        <small>Status: Fully approved and active</small>
+                                        <div class="mt-2">
+                                            <button class="btn btn-sm btn-outline-secondary">View Details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+     <!-- Custom JS -->
+    <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/dashboard.js"></script>
+    <script src="/js/layout.js"></script>
+</body>
+</html>
