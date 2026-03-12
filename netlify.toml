@@ -1,6 +1,6 @@
 [build]
 command = ""
-publish = "."
+publish = "static-files"
 
 [build.environment]
 NODE_VERSION = "1.0.0"
