@@ -6,12 +6,12 @@
 
 document.addEventListener('DOMContentLoaded', async () => {
     await Promise.all([
-        loadPartial('site-header', '/static-files/includes/header.html'),
-        loadPartial('site-footer', '/static-files/includes/footer.html'),
-        loadPartial('admin-sidebar', '/static-files/includes/admin-sidebar.html'),
-        loadPartial('admin-header', '/static-files/includes/admin-header.html'),
-        loadPartial('student-sidebar', '/static-files/includes/student-sidebar.html'),
-        loadPartial('student-header', '/static-files/includes/student-header.html')
+        loadPartial('site-header', '/includes/header.html'),
+        loadPartial('site-footer', '/includes/footer.html'),
+        loadPartial('admin-sidebar', '/includes/admin-sidebar.html'),
+        loadPartial('admin-header', '/includes/admin-header.html'),
+        loadPartial('student-sidebar', '/includes/student-sidebar.html'),
+        loadPartial('student-header', '/includes/student-header.html')
     ]);
 
     initializeNavigation();
